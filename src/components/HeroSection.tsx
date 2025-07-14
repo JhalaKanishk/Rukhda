@@ -1,40 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Carousel3D from "@/components/Carousel3D";
 
-const slides = [
-  {
-    id: 1,
-    image: "/placeholder.svg?height=400&width=400",
-    title: "Modern Chair",
-    description: "Sleek and comfortable seating for any space",
-  },
-  {
-    id: 2,
-    image: "/placeholder.svg?height=400&width=400",
-    title: "Cozy Sofa",
-    description: "Perfect for relaxing and entertaining guests",
-  },
-  {
-    id: 3,
-    image: "/placeholder.svg?height=400&width=400",
-    title: "Minimal Lamp",
-    description: "Clean lighting design for modern homes",
-  },
-];
-
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-play functionality
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 4000); // 4 seconds
-
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <section id="home" className="w-full pt-6 pb-12 md:pt-10 md:pb-20 lg:pt-12 lg:pb-24">
