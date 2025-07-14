@@ -47,15 +47,15 @@ const AboutSection = () => {
                             <h3 className="text-3xl font-bold text-primary mb-6">Our Story</h3>
                             <p className="text-brown-text mb-4 leading-relaxed">
                                 What started as a small initiative to brighten up workspaces has grown into a comprehensive
-                                plant care and décor service. We believe that surrounding yourself with greenery isn't just
-                                about aesthetics—it's about creating a lifestyle that promotes well-being, productivity, and connection with nature.
+                                plant care and décor service. We believe that surrounding yourself with greenery is not just
+                                about aesthetics—it is about creating a lifestyle that promotes well-being, productivity, and connection with nature.
                             </p>
                             <p className="text-brown-text mb-4 leading-relaxed">
                                 Every plant we place and every design we create is thoughtfully chosen to enhance your environment
                                 while considering factors like lighting, maintenance requirements, and your personal style preferences.
                             </p>
                             <p className="text-brown-text leading-relaxed">
-                                Today, we're proud to be the leading plant service provider in the region, helping thousands
+                                Today, we are proud to be the leading plant service provider in the region, helping thousands
                                 of people create their perfect green sanctuary.
                             </p>
                         </div>

@@ -171,7 +171,7 @@ export default function GalleryPage() {
           <p className="text-xl text-green-600 max-w-3xl mx-auto leading-relaxed">
             Explore our diverse portfolio of landscaping projects, from intimate
             balcony gardens to expansive outdoor landscapes. Each project
-            reflects our commitment to bringing nature's beauty into every
+            reflects our commitment to bringing natures beauty into every
             space.
           </p>
         </div>
@@ -319,7 +319,7 @@ export default function GalleryPage() {
             Ready to Transform Your Space?
           </h3>
           <p className="text-xl mb-8 text-green-100">
-            Let's create something beautiful together. Contact us for a
+            Let us create something beautiful together. Contact us for a
             consultation.
           </p>
           <button className="bg-white text-green-800 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">

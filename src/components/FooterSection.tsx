@@ -1,9 +1,6 @@
 'use client'
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Leaf, Instagram, Facebook, MessageCircle, Mail, Phone, MapPin, Send } from "lucide-react";
-import { Toaster } from "@/components/ui/sonner";
+import { Leaf, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
 
@@ -14,7 +11,7 @@ const Footer = () => {
         e.preventDefault();
         if (email) {
             toast.success("Subscribed!", {
-                description: "Thank you for subscribing to our newsletter. You'll receive plant care tips and updates.",
+                description: "Thank you for subscribing to our newsletter. You will receive plant care tips and updates.",
             });
             setEmail("");
         }
@@ -78,7 +75,7 @@ const Footer = () => {
                             <span className="text-2xl font-bold text-primary">Rukhda</span>
                         </div>
                         <p className="text-brown-text leading-relaxed">
-                            Transforming spaces with nature's beauty. We specialize in plant care, interior plant décor,
+                            Transforming spaces with natures beauty. We specialize in plant care, interior plant décor,
                             and creating peaceful green environments for homes, offices, and special events.
                         </p>
 

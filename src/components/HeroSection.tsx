@@ -1,10 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
 import Carousel3D from "@/components/Carousel3D";
 
 const slides = [

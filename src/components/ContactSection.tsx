@@ -28,7 +28,7 @@ const ContactSection = () => {
         e.preventDefault();
 
         toast.success("Message Sent!", {
-            description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+            description: "Thank you for contacting us. We will get back to you within 24 hours.",
         });
 
         setFormData({
@@ -77,7 +77,7 @@ const ContactSection = () => {
                         </h2>
                         <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
                         <p className="text-lg text-brown-text max-w-3xl mx-auto leading-relaxed">
-                            Ready to bring nature into your space? Contact us for a free consultation and let's
+                            Ready to bring nature into your space? Contact us for a free consultation and let us
                             create your perfect green sanctuary together.
                         </p>
                     </div>
@@ -156,7 +156,7 @@ const ContactSection = () => {
                             <div>
                                 <h3 className="text-2xl font-bold text-primary mb-6">Contact Information</h3>
                                 <p className="text-brown-text mb-8 leading-relaxed">
-                                    We're here to help you create the perfect Rukhda. Reach out through any of these channels
+                                    We are here to help you create the perfect Rukhda. Reach out through any of these channels
                                     and our friendly team will get back to you promptly.
                                 </p>
                             </div>
@@ -220,7 +220,7 @@ const ContactSection = () => {
                                     <div>• Green Suburbs</div>
                                 </div>
                                 <p className="text-brown-light text-xs mt-3">
-                                    Don't see your area? Contact us - we may still be able to help!
+                                    Do not see your area? Contact us - we may still be able to help!
                                 </p>
                             </div>
                         </div>

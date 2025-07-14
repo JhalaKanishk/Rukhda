@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -27,7 +27,7 @@ const ReviewsSection = () => {
     {
       name: "Emily Rodriguez",
       rating: 5,
-      text: "The balcony garden they designed exceeded all my expectations. It's now my favorite spot for morning coffee. The team's expertise in selecting the right plants for our climate is impressive.",
+      text: "The balcony garden they designed exceeded all my expectations. It is now my favorite spot for morning coffee. The teams expertise in selecting the right plants for our climate is impressive.",
       role: "Homeowner",
       location: "Suburbs"
     },
@@ -48,7 +48,7 @@ const ReviewsSection = () => {
     {
       name: "James Miller",
       rating: 5,
-      text: "The consultation was incredibly detailed and personalized. They considered our pets, lighting conditions, and lifestyle to create the perfect indoor garden. Five stars isn't enough!",
+      text: "The consultation was incredibly detailed and personalized. They considered our pets, lighting conditions, and lifestyle to create the perfect indoor garden. Five stars is not enough!",
       role: "Pet Owner",
       location: "Residential Area"
     }
@@ -74,8 +74,8 @@ const ReviewsSection = () => {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-lg text-brown-text max-w-3xl mx-auto leading-relaxed">
-              Don't just take our word for it. Hear from our satisfied customers who have transformed
-              their spaces with Rukhda's expert plant care and décor services.
+              Do not just take our word for it. Hear from our satisfied customers who have transformed
+              their spaces with Rukhdas expert plant care and décor services.
             </p>
           </div>
 
