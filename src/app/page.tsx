@@ -5,6 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
 import PlansSection from '@/components/PlansSection';
 import ReviewsSection from '@/components/ReviewsSection';
+// import Gallery from "./gallery/page";
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
     <div>
       <Navigation />
       <HeroSection />
+      {/* <Gallery /> */}
       <AboutSection />
       <PlansSection />
       <ReviewsSection />

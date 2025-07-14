@@ -1,131 +1,161 @@
-'use client'
+"use client";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Leaf, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const Navigation = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const navItems = [
-        { name: "Home", href: "#home" },
-        { name: "About", href: "#about" },
-        { name: "Plans", href: "#plans" },
-        { name: "Gallery", href: "#gallery" },
-        { name: "Reviews", href: "#reviews" },
-        { name: "Contact", href: "#contact" }
-    ];
-
-    const scrollToSection = (href: string) => {
-        const element = document.querySelector(href);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setIsOpen(false);
-        }
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
     };
 
-    return (
-        <>
-            {/* Desktop Navigation */}
-            <nav className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${scrolled
-                    ? 'bg-background/95 backdrop-blur-md border-b border-primary/10 shadow-lg'
-                    : 'bg-transparent'
-                }`}>
-                <div className="container mx-auto px-4">
-                    <div className="flex items-center justify-between h-16">
-                        {/* Logo */}
-                        <div className="flex items-center space-x-2">
-                            <Leaf className="h-8 w-8 text-primary" />
-                            <span className="text-2xl font-bold text-primary">Rukhda</span>
-                        </div>
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-                        {/* Desktop Menu */}
-                        <div className="hidden md:flex items-center space-x-8">
-                            {navItems.map((item) => (
-                                <button
-                                    key={item.name}
-                                    onClick={() => scrollToSection(item.href)}
-                                    className="text-foreground hover:text-primary transition-colors font-medium"
-                                >
-                                    {item.name}
-                                </button>
-                            ))}
-                        </div>
+  const navItems = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Plans", href: "#plans" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Reviews", href: "#reviews" },
+    { name: "Contact", href: "#contact" },
+  ];
 
-                        {/* Mobile Menu Button */}
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            className="md:hidden"
-                            onClick={() => setIsOpen(!isOpen)}
-                        >
-                            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                        </Button>
-                    </div>
-                </div>
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
+  return (
+    <>
+      {/* Desktop Navigation */}
+      <nav
+        className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
+          scrolled
+            ? "bg-background/95 backdrop-blur-md border-b border-primary/10 shadow-lg"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <Link href="/">
+              <div className="flex items-center space-x-2 cursor-pointer">
+                <Leaf className="h-8 w-8 text-primary" />
+                <span className="text-2xl font-bold text-primary">Rukhda</span>
+              </div>
+            </Link>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) =>
+                item.href.startsWith("#") ? (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="text-foreground hover:text-primary transition-colors font-medium cursor-pointer"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors font-medium cursor-pointer"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed inset-0 z-40 transition-opacity duration-300 md:hidden ${
+          isOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {/* Backdrop */}
+        <div
+          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          onClick={() => setIsOpen(false)}
+        />
+
+        {/* Sidebar */}
+        <div
+          className={`absolute right-0 top-0 h-full w-80 bg-background border-l border-primary/20 shadow-2xl transform transition-transform duration-300 ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Sidebar Header */}
+          <div className="flex items-center justify-between p-6 border-b border-primary/10">
+            <div className="flex items-center space-x-2">
+              <Leaf className="h-6 w-6 text-primary" />
+              <span className="text-xl font-bold text-primary">Rukhda</span>
+            </div>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(false)}
+            >
+              <X className="h-5 w-5" />
+            </Button>
+          </div>
+
+          {/* Sidebar Menu */}
+          <div className="p-6">
+            <nav className="space-y-4">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="block w-full text-left py-3 px-4 rounded-lg text-foreground hover:bg-accent hover:text-primary transition-colors font-medium"
+                >
+                  {item.name}
+                </button>
+              ))}
             </nav>
 
-            {/* Mobile Sidebar */}
-            <div className={`fixed inset-0 z-40 transition-opacity duration-300 md:hidden ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-                }`}>
-                {/* Backdrop */}
-                <div
-                    className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-                    onClick={() => setIsOpen(false)}
-                />
-
-                {/* Sidebar */}
-                <div className={`absolute right-0 top-0 h-full w-80 bg-background border-l border-primary/20 shadow-2xl transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'
-                    }`}>
-                    {/* Sidebar Header */}
-                    <div className="flex items-center justify-between p-6 border-b border-primary/10">
-                        <div className="flex items-center space-x-2">
-                            <Leaf className="h-6 w-6 text-primary" />
-                            <span className="text-xl font-bold text-primary">Rukhda</span>
-                        </div>
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            <X className="h-5 w-5" />
-                        </Button>
-                    </div>
-
-                    {/* Sidebar Menu */}
-                    <div className="p-6">
-                        <nav className="space-y-4">
-                            {navItems.map((item) => (
-                                <button
-                                    key={item.name}
-                                    onClick={() => scrollToSection(item.href)}
-                                    className="block w-full text-left py-3 px-4 rounded-lg text-foreground hover:bg-accent hover:text-primary transition-colors font-medium"
-                                >
-                                    {item.name}
-                                </button>
-                            ))}
-                        </nav>
-
-                        {/* Contact Info in Sidebar */}
-                        <div className="mt-8 p-4 bg-accent/20 rounded-lg border border-primary/10">
-                            <h4 className="font-bold text-primary mb-2">Quick Contact</h4>
-                            <p className="text-sm text-brown-text mb-1">📞 +1 (555) 123-PLANT</p>
-                            <p className="text-sm text-brown-text">✉️ info@Rukhda.com</p>
-                        </div>
-                    </div>
-                </div>
+            {/* Contact Info in Sidebar */}
+            <div className="mt-8 p-4 bg-accent/20 rounded-lg border border-primary/10">
+              <h4 className="font-bold text-primary mb-2">Quick Contact</h4>
+              <p className="text-sm text-brown-text mb-1">
+                📞 +1 (555) 123-PLANT
+              </p>
+              <p className="text-sm text-brown-text">✉️ info@Rukhda.com</p>
             </div>
-        </>
-    );
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Navigation;

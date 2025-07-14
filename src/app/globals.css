@@ -120,3 +120,91 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* styles/Carousel3D.module.css */
+.wrapper {
+  height: 100vh; /* This is too tall for mobile */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gallery {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: black;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: scale(0.7);
+  z-index: 0;
+}
+
+/* Center card */
+.pos0 {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+  z-index: 5;
+}
+
+.pos-1 {
+  opacity: 0.6;
+  transform: scale(0.85) translateX(-140px);
+  z-index: 4;
+}
+
+.pos1 {
+  opacity: 0.6;
+  transform: scale(0.85) translateX(140px);
+  z-index: 4;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 600px) {
+  .wrapper {
+    height: auto; /* 🔧 Fixes the extra spacing */
+    padding-top: 2rem; /* optional fine-tuning */
+    padding-bottom: 2rem;
+  }
+
+  .gallery {
+    height: 220px;
+  }
+
+  .card {
+    width: 200px;
+    height: 200px;
+    font-size: 1.5rem;
+  }
+
+  .pos-1 {
+    transform: scale(0.85) translateX(-100px);
+  }
+
+  .pos1 {
+    transform: scale(0.85) translateX(100px);
+  }
+}
