@@ -36,18 +36,6 @@ export default function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <section id="home" className="w-full pt-6 pb-12 md:pt-10 md:pb-20 lg:pt-12 lg:pb-24">
       <div className="container px-4 md:px-6">

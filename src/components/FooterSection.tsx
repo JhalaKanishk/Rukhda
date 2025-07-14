@@ -1,21 +1,7 @@
 'use client'
-import { useState } from "react";
-import { Leaf, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
-import { toast } from "sonner";
-
+import { Leaf, Instagram, Facebook, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
-    const [email, setEmail] = useState("");
-
-    const handleNewsletterSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (email) {
-            toast.success("Subscribed!", {
-                description: "Thank you for subscribing to our newsletter. You will receive plant care tips and updates.",
-            });
-            setEmail("");
-        }
-    };
 
     const quickLinks = [
         { name: "Home", href: "#home" },

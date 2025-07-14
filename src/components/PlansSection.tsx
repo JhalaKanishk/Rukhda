@@ -106,7 +106,7 @@ const PlansSection = () => {
                                 </ul>
 
                                 <Button
-                                    variant={plan.popular ? "hero" : "nature"}
+                                   variant={plan.popular ? "default" : "outline"}
                                     className="w-full"
                                     size="lg"
                                 >

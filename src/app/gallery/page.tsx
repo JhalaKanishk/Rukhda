@@ -171,24 +171,20 @@ export default function GalleryPage() {
           <p className="text-xl text-green-600 max-w-3xl mx-auto leading-relaxed">
             Explore our diverse portfolio of landscaping projects, from intimate
             balcony gardens to expansive outdoor landscapes. Each project
-            reflects our commitment to bringing natures beauty into every
-            space.
+            reflects our commitment to bringing natures beauty into every space.
           </p>
         </div>
       </section>
 
       {/* Gallery Sections */}
       <main className="pb-16">
-        {categories.map((category, categoryIndex) => (
+        {categories.map((category) => (
           <section
             key={category.id}
             id={category.id}
-            ref={(el) => (sectionRefs.current[category.id] = el)}
-            className={`py-16 px-4 transition-all duration-1000 transform ${
-              visibleSections.has(category.id)
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
-            }`}
+            ref={(el) => {
+              sectionRefs.current[category.id] = el;
+            }}
           >
             <div className="container mx-auto">
               {/* Section Header */}
