@@ -43,93 +43,170 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* Define CSS variables for the RUKHDA theme */
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --primary: #2D3015; /* Dark green for text and accents */
+  --foreground: #2D3015; /* Dark green for main text */
+  --background: #F5E8D0; /* Warm beige background */
+  --accent: #D4A373; /* Earthy brown for hover states */
+  --primary-light: rgba(212, 163, 115, 0.2); /* Light accent for subtle effects */
+  --card: #F9F1E0; /* Slightly lighter beige for cards */
+  --card-foreground: #2D3015; /* Dark green for card text */
+  --popover: #F9F1E0; /* Lighter beige for popovers */
+  --popover-foreground: #2D3015; /* Dark green for popover text */
+  --secondary: #8A6F47; /* Muted brown for secondary elements */
+  --secondary-foreground: #F5E8D0; /* Beige for secondary text */
+  --muted: #D9C1A2; /* Pale brown for muted elements */
+  --muted-foreground: #4A4E2E; /* Darker muted green */
+  --border: rgba(212, 163, 115, 0.3); /* Soft brown border */
+  --input: #D9C1A2; /* Pale brown for inputs */
+  --ring: #D4A373; /* Earthy brown for focus rings */
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #2D3015; /* Dark green background */
+  --foreground: #F5E8D0; /* Beige text */
+  --card: #3A3D1F; /* Darker green for cards */
+  --card-foreground: #F5E8D0; /* Beige for card text */
+  --popover: #3A3D1F; /* Darker green for popovers */
+  --popover-foreground: #F5E8D0; /* Beige for popover text */
+  --primary: #D4A373; /* Earthy brown for accents */
+  --primary-foreground: #F5E8D0; /* Beige for primary text */
+  --secondary: #8A6F47; /* Muted brown */
+  --secondary-foreground: #F5E8D0; /* Beige for secondary text */
+  --muted: #4A4E2E; /* Dark muted green */
+  --muted-foreground: #D9C1A2; /* Pale brown for muted text */
+  --border: rgba(212, 163, 115, 0.4); /* Slightly more opaque border */
+  --input: #4A4E2E; /* Dark muted green for inputs */
+  --ring: #D4A373; /* Earthy brown for focus rings */
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-family: 'Georgia', serif; /* Rustic, nature-inspired font */
   }
   body {
     @apply bg-background text-foreground;
   }
 }
 
+/* Glassmorphism effect for navigation bar with RUKHDA theme */
+nav {
+  background: rgba(245, 232, 208, 0.85); /* Semi-transparent beige */
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(45, 48, 21, 0.1);
+  transition: all 0.3s ease-in-out;
+}
 
-/* styles/Carousel3D.module.css */
+nav.scrolled {
+  background: rgba(245, 232, 208, 0.95);
+  box-shadow: 0 6px 16px rgba(45, 48, 21, 0.15);
+}
+
+/* Logo and text styling */
+nav .text-primary,
+nav .font-bold {
+  color: var(--primary) !important;
+}
+
+nav .text-foreground {
+  color: var(--foreground) !important;
+}
+
+nav .hover\:text-primary:hover {
+  color: var(--primary) !important;
+}
+
+nav .hover\:bg-accent:hover {
+  background-color: var(--accent) !important;
+}
+
+/* Button and link styling */
+nav button,
+nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+
+/* Mobile menu button */
+button[aria-label="Toggle menu"] {
+  color: var(--primary);
+}
+
+button[aria-label="Toggle menu"]:hover {
+  background-color: var(--primary-light);
+}
+
+/* Mobile sidebar */
+.mobile-sidebar {
+  background: var(--card);
+  border-left: 1px solid var(--border);
+  box-shadow: -4px 0 12px rgba(45, 48, 21, 0.1);
+}
+
+.mobile-sidebar .flex.items-center {
+  background: rgba(249, 241, 224, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-sidebar button {
+  font-size: 1.1rem;
+  color: var(--card-foreground);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  transition: all 0.3s ease;
+}
+
+.mobile-sidebar button:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.mobile-sidebar .bg-accent\/20 {
+  background: rgba(212, 163, 115, 0.3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.mobile-sidebar .text-brown-text {
+  color: var(--card-foreground) !important;
+}
+
+.mobile-sidebar .font-bold {
+  color: var(--primary) !important;
+}
+
+svg.text-primary {
+  color: var(--primary) !important;
+}
+
+.backdrop {
+  background: rgba(45, 48, 21, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.transform.transition-transform {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Carousel3D styles with RUKHDA theme */
 .wrapper {
-  height: 100vh; /* This is too tall for mobile */
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  padding: 2rem 0;
+  background: linear-gradient(to bottom, #FFFFFF, rgba(245, 232, 208, 0.7) 50%, #F5E8D0); 
 }
 
 .gallery {
@@ -140,7 +217,7 @@
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: 300px;
+  height: 320px;
   perspective: 1000px;
   margin: 0;
   padding: 0;
@@ -150,61 +227,74 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  background: black;
-  color: white;
-  font-size: 2rem;
+  background: var(--card);
+  color: var(--card-foreground);
+  font-size: 1.5rem;
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(45, 48, 21, 0.1);
   transition: all 0.3s ease;
   opacity: 0;
   transform: scale(0.7);
   z-index: 0;
 }
 
-/* Center card */
 .pos0 {
   opacity: 1;
   transform: scale(1) translateX(0);
   z-index: 5;
+  box-shadow: 0 6px 16px rgba(45, 48, 21, 0.2);
 }
 
 .pos-1 {
-  opacity: 0.6;
-  transform: scale(0.85) translateX(-140px);
+  opacity: 0.7;
+  transform: scale(0.85) translateX(-160px);
   z-index: 4;
 }
 
 .pos1 {
-  opacity: 0.6;
-  transform: scale(0.85) translateX(140px);
+  opacity: 0.7;
+  transform: scale(0.85) translateX(160px);
   z-index: 4;
 }
 
-/* ✅ Responsive Fix */
 @media (max-width: 600px) {
   .wrapper {
-    height: auto; /* 🔧 Fixes the extra spacing */
-    padding-top: 2rem; /* optional fine-tuning */
-    padding-bottom: 2rem;
+    padding: 1.5rem 0;
   }
 
   .gallery {
-    height: 220px;
+    height: 240px;
   }
 
   .card {
     width: 200px;
     height: 200px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: var(--radius-md);
   }
 
   .pos-1 {
-    transform: scale(0.85) translateX(-100px);
+    transform: scale(0.85) translateX(-110px);
   }
 
   .pos1 {
-    transform: scale(0.85) translateX(100px);
+    transform: scale(0.85) translateX(110px);
   }
 }
+
+/* RUKHDA Emblem as background or logo (optional styling) */
+/* .logo-emblem {
+  background-image: url('path-to-emblem-image.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+} */
+ 

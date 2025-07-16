@@ -1,6 +1,8 @@
 "use client";
 
 import Carousel3D from "@/components/Carousel3D";
+//#BF9B69 : heading
+//#2D3015 : para
 
 export default function HeroSection() {
   return (
