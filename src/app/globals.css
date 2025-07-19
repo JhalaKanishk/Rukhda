@@ -43,7 +43,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Define CSS variables for the RUKHDA theme */
+/* Define CSS variables for the Rukhada theme */
 :root {
   --radius: 0.625rem;
   --primary: #2D3015; /* Dark green for text and accents */
@@ -92,7 +92,7 @@
   }
 }
 
-/* Glassmorphism effect for navigation bar with RUKHDA theme */
+/* Glassmorphism effect for navigation bar with Rukhada theme */
 nav {
   background: rgba(245, 232, 208, 0.85); /* Semi-transparent beige */
   backdrop-filter: blur(12px);
@@ -116,13 +116,6 @@ nav .text-foreground {
   color: var(--foreground) !important;
 }
 
-nav .hover\:text-primary:hover {
-  color: var(--primary) !important;
-}
-
-nav .hover\:bg-accent:hover {
-  background-color: var(--accent) !important;
-}
 
 /* Button and link styling */
 nav button,
@@ -138,10 +131,6 @@ nav a {
 /* Mobile menu button */
 button[aria-label="Toggle menu"] {
   color: var(--primary);
-}
-
-button[aria-label="Toggle menu"]:hover {
-  background-color: var(--primary-light);
 }
 
 /* Mobile sidebar */
@@ -165,10 +154,6 @@ button[aria-label="Toggle menu"]:hover {
   transition: all 0.3s ease;
 }
 
-.mobile-sidebar button:hover {
-  background-color: var(--accent);
-  color: var(--primary);
-}
 
 .mobile-sidebar .bg-accent\/20 {
   background: rgba(212, 163, 115, 0.3);
@@ -198,7 +183,7 @@ svg.text-primary {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Carousel3D styles with RUKHDA theme */
+/* Carousel3D styles with Rukhada theme */
 .wrapper {
   height: auto;
   display: flex;
@@ -287,7 +272,7 @@ svg.text-primary {
   }
 }
 
-/* RUKHDA Emblem as background or logo (optional styling) */
+/* Rukhada Emblem as background or logo (optional styling) */
 /* .logo-emblem {
   background-image: url('path-to-emblem-image.png'); 
   background-size: contain;
@@ -298,3 +283,32 @@ svg.text-primary {
   margin: 0 auto;
 } */
  
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: var(--background); /* Dark green */
+  color: var(--foreground);             /* Beige */
+  border-radius: 9999px;                /* Circular */
+  width: 44px;
+  height: 44px;
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #1d1f0f; /* Slightly darker green on hover */
+  color: #F5E8D0;             /* Beige */
+  transform: scale(1.05);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--foreground);
+}

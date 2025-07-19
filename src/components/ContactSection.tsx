@@ -55,8 +55,8 @@ const ContactSection = () => {
         {
             icon: Mail,
             title: "Email Us",
-            details: ["info@Rukhda.com", "support@Rukhda.com"],
-            link: "mailto:info@Rukhda.com"
+            details: ["info@Rukhada.com", "support@Rukhada.com"],
+            link: "mailto:info@Rukhada.com"
         },
         {
             icon: Clock,
@@ -156,7 +156,7 @@ const ContactSection = () => {
                             <div>
                                 <h3 className="text-2xl font-bold text-primary mb-6">Contact Information</h3>
                                 <p className="text-brown-text mb-8 leading-relaxed">
-                                    We are here to help you create the perfect Rukhda. Reach out through any of these channels
+                                    We are here to help you create the perfect Rukhada. Reach out through any of these channels
                                     and our friendly team will get back to you promptly.
                                 </p>
                             </div>

@@ -50,7 +50,7 @@ const Navigation = () => {
             <Link href="/">
               <div className="flex items-center space-x-2 cursor-pointer">
                 <Leaf className="h-8 w-8 text-primary" />
-                <span className="text-2xl font-bold text-primary">Rukhda</span>
+                <span className="text-2xl font-bold text-primary">Rukhada</span>
               </div>
             </Link>
 
@@ -118,7 +118,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between p-6 border-b border-primary/10">
             <div className="flex items-center space-x-2">
               <Leaf className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold text-primary">Rukhda</span>
+              <span className="text-xl font-bold text-primary">Rukhada</span>
             </div>
             <Button
               variant="ghost"
@@ -149,7 +149,7 @@ const Navigation = () => {
               <p className="text-sm text-brown-text mb-1">
                 📞 +1 (555) 123-PLANT
               </p>
-              <p className="text-sm text-brown-text">✉️ info@Rukhda.com</p>
+              <p className="text-sm text-brown-text">✉️ info@Rukhada.com</p>
             </div>
           </div>
         </div>

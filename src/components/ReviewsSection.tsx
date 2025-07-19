@@ -12,14 +12,14 @@ const ReviewsSection = () => {
     {
       name: "Sarah Johnson",
       rating: 5,
-      text: "Rukhda completely transformed my apartment! The plants they selected not only look beautiful but are thriving even with my busy schedule. The monthly care service is a game-changer.",
+      text: "Rukhada completely transformed my apartment! The plants they selected not only look beautiful but are thriving even with my busy schedule. The monthly care service is a game-changer.",
       role: "Apartment Owner",
       location: "Downtown",
     },
     {
       name: "Michael Chen",
       rating: 5,
-      text: "Our office productivity increased noticeably after Rukhda installed our green corner. The air feels fresher, and employees love the natural atmosphere. Highly recommend their services!",
+      text: "Our office productivity increased noticeably after Rukhada installed our green corner. The air feels fresher, and employees love the natural atmosphere. Highly recommend their services!",
       role: "Office Manager",
       location: "Tech District",
     },
@@ -33,14 +33,14 @@ const ReviewsSection = () => {
     {
       name: "David Thompson",
       rating: 5,
-      text: "Used Rukhda for our wedding decoration and guests are still talking about it! The natural arrangements created such a romantic and elegant atmosphere. Absolutely stunning work.",
+      text: "Used Rukhada for our wedding decoration and guests are still talking about it! The natural arrangements created such a romantic and elegant atmosphere. Absolutely stunning work.",
       role: "Event Host",
       location: "Garden Venue",
     },
     {
       name: "Lisa Wang",
       rating: 5,
-      text: "As someone who travels frequently, their plant care service has been a lifesaver. I come home to healthy, thriving plants every time. The app updates keep me connected to my Rukhda.",
+      text: "As someone who travels frequently, their plant care service has been a lifesaver. I come home to healthy, thriving plants every time. The app updates keep me connected to my Rukhada.",
       role: "Frequent Traveler",
       location: "City Center",
     },
@@ -79,7 +79,7 @@ const ReviewsSection = () => {
             <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-lg text-brown-text max-w-3xl mx-auto leading-relaxed">
               Do not just take our word for it. Hear from our satisfied
-              customers who have transformed their spaces with Rukhdas expert
+              customers who have transformed their spaces with Rukhadas expert
               plant care and décor services.
             </p>
           </div>
@@ -125,42 +125,6 @@ const ReviewsSection = () => {
             ))}
           </Swiper>
 
-          {/* Stats Section */}
-          <div className="grid md:grid-cols-4 gap-y-12 gap-x-8 text-center mt-8">
-            {[
-              { number: "500+", label: "Happy Clients" },
-              { number: "5000+", label: "Plants Cared For" },
-              { number: "98%", label: "Satisfaction Rate" },
-              { number: "50+", label: "Events Decorated" },
-            ].map((stat, index) => (
-              <div key={index} className="p-4">
-                <div className="text-4xl font-bold text-primary mb-1">
-                  {stat.number}
-                </div>
-                <div className="text-brown-text font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Trust Indicators */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-primary mb-6">
-              Trusted & Certified
-            </h3>
-            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 text-brown-light text-sm">
-              {[
-                "Licensed Plant Care Specialists",
-                "Eco-Certified Practices",
-                "Insured & Bonded",
-                "Award-Winning Service",
-              ].map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <Star className="h-5 w-5 text-primary" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -80,7 +80,7 @@ const PlansSection = () => {
                             >
                                 {plan.popular && (
                                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                        <div className="bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-bold flex items-center">
+                                        <div className="bg-primary text-background px-6 py-2 rounded-full text-sm font-bold flex items-center">
                                             <Star className="h-4 w-4 mr-1" />
                                             Most Popular
                                         </div>
@@ -107,31 +107,13 @@ const PlansSection = () => {
 
                                 <Button
                                    variant={plan.popular ? "default" : "outline"}
-                                    className="w-full"
+                                    className="w-full text-background"
                                     size="lg"
                                 >
                                     {plan.popular ? "Start Growing Today" : "Choose Plan"}
                                 </Button>
                             </div>
                         ))}
-                    </div>
-
-                    {/* Additional Services */}
-                    <div className="mt-16 text-center">
-                        <h3 className="text-3xl font-bold text-primary mb-8">Additional Services</h3>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {[
-                                { name: "One-time Setup", price: "Starting at $150" },
-                                { name: "Event Decoration", price: "Starting at $200" },
-                                { name: "Plant Consultation", price: "$75/hour" },
-                                { name: "Emergency Care", price: "$50/visit" }
-                            ].map((service, index) => (
-                                <div key={index} className="p-6 bg-card rounded-xl border border-primary/10 hover:shadow-lg transition-all duration-300">
-                                    <h4 className="text-lg font-bold text-primary mb-2">{service.name}</h4>
-                                    <p className="text-brown-text">{service.price}</p>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </div>
             </div>

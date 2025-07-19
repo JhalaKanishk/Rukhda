@@ -15,7 +15,7 @@ const Footer = () => {
     const services = [
         "Indoor Plant Care",
         "Balcony Gardens",
-        "Office Rukhdas",
+        "Office Rukhadas",
         "Event Decoration",
         "Plant Consultation",
         "Emergency Care"
@@ -25,19 +25,19 @@ const Footer = () => {
         {
             icon: Instagram,
             name: "Instagram",
-            href: "https://instagram.com/Rukhda",
+            href: "https://instagram.com/Rukhada",
             color: "hover:text-pink-500"
         },
         {
             icon: Facebook,
             name: "Facebook",
-            href: "https://facebook.com/Rukhda",
+            href: "https://facebook.com/Rukhada",
             color: "hover:text-blue-500"
         },
         {
             icon: MessageCircle,
             name: "Pinterest",
-            href: "https://pinterest.com/Rukhda",
+            href: "https://pinterest.com/Rukhada",
             color: "hover:text-red-500"
         }
     ];
@@ -58,7 +58,7 @@ const Footer = () => {
                     <div className="space-y-6">
                         <div className="flex items-center space-x-2">
                             <Leaf className="h-8 w-8 text-primary" />
-                            <span className="text-2xl font-bold text-primary">Rukhda</span>
+                            <span className="text-2xl font-bold text-primary">Rukhada</span>
                         </div>
                         <p className="text-brown-text leading-relaxed">
                             Transforming spaces with natures beauty. We specialize in plant care, interior plant décor,
@@ -73,7 +73,7 @@ const Footer = () => {
                             </div>
                             <div className="flex items-center space-x-3 text-brown-text">
                                 <Mail className="h-4 w-4 text-primary" />
-                                <span>info@Rukhda.com</span>
+                                <span>info@Rukhada.com</span>
                             </div>
                             <div className="flex items-center space-x-3 text-brown-text">
                                 <MapPin className="h-4 w-4 text-primary" />
@@ -103,7 +103,7 @@ const Footer = () => {
                     {/* Quick Links */}
                     <div>
                         <h3 className="text-xl font-bold text-primary mb-6">Quick Links</h3>
-                        <nav className="space-y-3">
+                        <div className="space-y-3">
                             {quickLinks.map((link) => (
                                 <button
                                     key={link.name}
@@ -113,7 +113,7 @@ const Footer = () => {
                                     {link.name}
                                 </button>
                             ))}
-                        </nav>
+                        </div>
                     </div>
 
                     {/* Services */}
@@ -160,7 +160,7 @@ const Footer = () => {
                 <div className="container mx-auto px-4 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <div className="text-brown-text text-sm">
-                            © 2024 Rukhda. All rights reserved. | Bringing nature to life, one space at a time.
+                            © 2024 Rukhada. All rights reserved. | Bringing nature to life, one space at a time.
                         </div>
                         <div className="flex space-x-6 text-sm text-brown-light">
                             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>

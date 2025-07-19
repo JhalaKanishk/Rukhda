@@ -1,8 +1,6 @@
 "use client";
 
 import Carousel3D from "@/components/Carousel3D";
-//#BF9B69 : heading
-//#2D3015 : para
 
 export default function HeroSection() {
   return (
@@ -22,12 +20,14 @@ export default function HeroSection() {
           <div className="order-1 lg:order-2 flex flex-col justify-center space-y-6">
             <div className="space-y-4">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Transform Your Space
+                Our Vision
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Discover our curated collection of modern furniture and
-                lighting. Each piece is carefully selected to bring style and
-                comfort to your home.
+                A campaign rooted in responsibility— We envision a world where
+                every individual contributes to a greener tomorrow. Inspired by
+                the urgency of global warming, we promote tree plantation and
+                green living to ensure a cleaner, healthier earth for the
+                generations that follow.
               </p>
             </div>
 
