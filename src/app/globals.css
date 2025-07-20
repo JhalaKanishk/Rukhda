@@ -92,6 +92,8 @@
   }
 }
 
+
+
 /* Glassmorphism effect for navigation bar with Rukhada theme */
 nav {
   background: rgba(245, 232, 208, 0.85); /* Semi-transparent beige */
@@ -120,18 +122,63 @@ nav .text-foreground {
 /* Button and link styling */
 nav button,
 nav a {
+  position: relative;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.02em;
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
   transition: all 0.3s ease;
+  color: var(--primary);
+  background-color: transparent;
+}
+
+nav button:hover,
+nav a:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(45, 48, 21, 0.15);
+}
+
+nav {
+  background: rgba(245, 232, 208, 0.75);
+  backdrop-filter: blur(16px) saturate(150%);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(45, 48, 21, 0.12);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+nav.scrolled {
+  background: rgba(245, 232, 208, 0.92);
+  box-shadow: 0 10px 30px rgba(45, 48, 21, 0.18);
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* Mobile menu button */
 button[aria-label="Toggle menu"] {
   color: var(--primary);
 }
+
+.card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(45, 48, 21, 0.25);
+  cursor: pointer;
+}
+
 
 /* Mobile sidebar */
 .mobile-sidebar {

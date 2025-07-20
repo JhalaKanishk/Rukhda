@@ -1,8 +1,15 @@
 "use client";
 
 import Carousel3D from "@/components/Carousel3D";
+import { useEffect } from "react";
 
 export default function HeroSection() {
+  useEffect(() => {
+    const element = document.getElementById("home");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
   return (
     // <section id="home" className="w-full pt-6 pb-12 md:pt-10 md:pb-20 lg:pt-12 lg:pb-24">
     <section
