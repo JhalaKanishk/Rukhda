@@ -160,7 +160,7 @@ export default function GalleryPage() {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Explore our diverse portfolio of landscaping projects, from intimate
             balcony gardens to expansive outdoor landscapes. Each project
-            reflects our commitment to bringing nature's beauty into every
+            reflects our commitment to bringing natures beauty into every
             space.
           </p>
         </div>
