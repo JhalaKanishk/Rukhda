@@ -5,16 +5,16 @@ import styles from "../styles/Carousel3D.module.css";
 import Image from "next/image";
 
 const items = [
-  "/gallery/s1.jpg",
-  "/gallery/s2.jpg",
-  "/gallery/s3.jpg",
-  "/gallery/s4.jpg",
-  "/gallery/s5.jpg",
-  "/gallery/s6.jpg",
-  "/gallery/s7.jpg",
-  "/gallery/s8.jpg",
-  "/gallery/s9.jpg",
-  "/gallery/s10.jpg",
+  "/gallery/s1.JPG",
+  "/gallery/s2.JPG",
+  "/gallery/s3.JPG",
+  "/gallery/s4.JPG",
+  "/gallery/s5.JPG",
+  "/gallery/s6.JPG",
+  "/gallery/s7.JPG",
+  "/gallery/s8.JPG",
+  "/gallery/s9.JPG",
+  "/gallery/s10.JPG",
 ];
 
 export default function Carousel3D() {
