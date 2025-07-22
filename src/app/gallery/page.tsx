@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronRight, Leaf } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 const categories = [
   {
