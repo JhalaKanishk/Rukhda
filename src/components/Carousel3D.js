@@ -2,18 +2,19 @@
 
 import { useEffect, useState } from "react";
 import styles from "../styles/Carousel3D.module.css";
+import Image from "next/image";
 
 const items = [
-  "gallery/s1.jpg",
-  "gallery/s2.jpg",
-  "gallery/s3.jpg",
-  "gallery/s4.jpg",
-  "gallery/s5.jpg",
-  "gallery/s6.jpg",
-  "gallery/s7.jpg",
-  "gallery/s8.jpg",
-  "gallery/s9.jpg",
-  "gallery/s10.jpg",
+  "/gallery/s1.jpg",
+  "/gallery/s2.jpg",
+  "/gallery/s3.jpg",
+  "/gallery/s4.jpg",
+  "/gallery/s5.jpg",
+  "/gallery/s6.jpg",
+  "/gallery/s7.jpg",
+  "/gallery/s8.jpg",
+  "/gallery/s9.jpg",
+  "/gallery/s10.jpg",
 ];
 
 export default function Carousel3D() {
@@ -46,10 +47,13 @@ export default function Carousel3D() {
                 styles[`pos${offset}`] || styles.hidden
               }`}
             >
-              <img
+              <Image
                 src={item}
                 alt={`Image ${index + 1}`}
                 className={styles.image}
+                width={500} // ⬅️ set your desired width
+                height={300}
+                priority
               />
             </li>
           );
