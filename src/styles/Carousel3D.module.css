@@ -106,11 +106,5 @@
 
   .pos2 {
     transform: scale(0.6) translateX(180px);
-  }
-
-  .pos-3,
-  .pos3 {
-    transform: scale(0.5) translateX(250px);
-    opacity: 0.05;
-  }
+  } 
 }

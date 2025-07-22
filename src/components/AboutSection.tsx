@@ -68,6 +68,9 @@ const AboutSection = () => {
               <h3 className="text-3xl font-bold text-primary mb-6">
                 Our Story
               </h3>
+              <p className="text-2xl font-bold text-primary mb-6">
+                The Roots of RUKHADA
+              </p>
               <p className="text-brown-text mb-4 leading-relaxed">
                 We’re Himanshu and Gaurav – two individuals from different
                 professional backgrounds but connected by one deep-rooted

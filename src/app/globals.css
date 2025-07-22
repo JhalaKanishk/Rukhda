@@ -92,20 +92,19 @@
   }
 }
 
-
-
 /* Glassmorphism effect for navigation bar with Rukhada theme */
 nav {
-  background: rgba(245, 232, 208, 0.85); /* Semi-transparent beige */
-  backdrop-filter: blur(12px);
+  background: #b99565; /* Correct beige background */
+  backdrop-filter: blur(16px) saturate(150%);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 4px 12px rgba(45, 48, 21, 0.1);
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 24px rgba(45, 48, 21, 0.12);
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Scrolled state of the navbar */
 nav.scrolled {
-  background: rgba(245, 232, 208, 0.95);
-  box-shadow: 0 6px 16px rgba(45, 48, 21, 0.15);
+  background: #b99565; /* Maintain same color */
+  box-shadow: 0 10px 30px rgba(45, 48, 21, 0.18);
 }
 
 /* Logo and text styling */
@@ -118,7 +117,6 @@ nav .text-foreground {
   color: var(--foreground) !important;
 }
 
-
 /* Button and link styling */
 nav button,
 nav a {
@@ -128,11 +126,12 @@ nav a {
   letter-spacing: 0.02em;
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
-  transition: all 0.3s ease;
   color: var(--primary);
   background-color: transparent;
+  transition: all 0.3s ease;
 }
 
+/* Hover effects for buttons and links */
 nav button:hover,
 nav a:hover {
   background-color: var(--primary-light);
@@ -140,18 +139,7 @@ nav a:hover {
   box-shadow: 0 2px 8px rgba(45, 48, 21, 0.15);
 }
 
-nav {
-  background: rgba(245, 232, 208, 0.75);
-  backdrop-filter: blur(16px) saturate(150%);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 8px 24px rgba(45, 48, 21, 0.12);
-  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-nav.scrolled {
-  background: rgba(245, 232, 208, 0.92);
-  box-shadow: 0 10px 30px rgba(45, 48, 21, 0.18);
-}
+/* Underline animation for links */
 nav a::after {
   content: '';
   position: absolute;

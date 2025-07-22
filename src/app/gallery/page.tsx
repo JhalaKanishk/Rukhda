@@ -11,24 +11,10 @@ const categories = [
     description:
       "Transform your outdoor spaces with professional landscape design",
     images: [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-    ],
-  },
-  {
-    id: "terrace-gardening",
-    title: "Terrace Gardening",
-    description: "Create beautiful rooftop gardens and terrace spaces",
-    images: [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
     ],
   },
   {
@@ -36,10 +22,10 @@ const categories = [
     title: "Balcony Beautification",
     description: "Maximize small spaces with stunning balcony gardens",
     images: [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
+      "/gallery/b1.JPG",
+      "/gallery/b2.JPG",
+      "/gallery/b3.JPG",
+      "/gallery/b4.JPG",
     ],
   },
   {
@@ -48,24 +34,10 @@ const categories = [
     description:
       "Bring nature indoors with carefully curated plant collections",
     images: [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-    ],
-  },
-  {
-    id: "garden-execution",
-    title: "Garden Execution",
-    description: "Complete garden installation and maintenance services",
-    images: [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
+      "/gallery/i1.JPG",
+      "/gallery/i2.JPG",
+      "/gallery/i3.JPG",
+      "/gallery/i4.JPG",
     ],
   },
 ];
@@ -114,10 +86,17 @@ export default function GalleryPage() {
           <div className="flex items-center justify-between">
             <Link href="/">
               <div className="flex items-center space-x-2 cursor-pointer">
-                <Leaf className="h-8 w-8 text-primary" />
+                <Image
+                  src="/gallery/logo.png" // Replace with your actual logo path
+                  alt="Rukhada Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain border-2 border-primary rounded-full"
+                />
                 <span className="text-2xl font-bold text-primary">Rukhada</span>
               </div>
             </Link>
+
             <nav className="hidden md:flex space-x-1">
               {categories.map((category) => (
                 <button
@@ -160,8 +139,7 @@ export default function GalleryPage() {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Explore our diverse portfolio of landscaping projects, from intimate
             balcony gardens to expansive outdoor landscapes. Each project
-            reflects our commitment to bringing natures beauty into every
-            space.
+            reflects our commitment to bringing natures beauty into every space.
           </p>
         </div>
       </section>
@@ -216,11 +194,16 @@ export default function GalleryPage() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute bottom-4 left-4 right-4 text-card-foreground transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      <div
+                        className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+                        style={{ color: "#F5E8D0" }}
+                      >
                         <h4 className="font-semibold text-lg mb-1">
                           {category.title} Project {index + 1}
                         </h4>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="text-sm text-muted-foreground"
+                        style={{ color: "#D9C1A2" }}
+                         >
                           Professional {category.title.toLowerCase()} design and
                           execution
                         </p>

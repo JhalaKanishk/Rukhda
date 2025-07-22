@@ -21,7 +21,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Plans", href: "#plans" },
+    // { name: "Plans", href: "#plans" },
     { name: "Gallery", href: "/gallery" },
     { name: "Reviews", href: "#reviews" },
     { name: "Contact", href: "#contact" },
@@ -54,9 +54,9 @@ const Navigation = () => {
                 <Image
                   src="/gallery/logo.png" // Replace with your actual logo path
                   alt="Rukhada Logo"
-                  width={40}
-                  height={40}
-                  className="h-8 w-8 object-contain"
+                  width={80}
+                  height={80}
+                    className="h-8 w-8 object-contain border-3 border-primary rounded-full"
                 />
                 <span className="text-2xl font-bold text-primary">Rukhada</span>
               </div>

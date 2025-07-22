@@ -20,13 +20,13 @@ export default function CircularPopup() {
           </button>
         </Link>
 
-        <Link href="https://wa.me/1234567890" target="_blank">
+        <Link href="https://wa.me/8949040522" target="_blank">
           <button className="w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-lg hover:bg-emerald-600">
             <MessageCircle />
           </button>
         </Link>
 
-        <Link href="https://instagram.com/yourhandle" target="_blank">
+        <Link href="https://www.instagram.com/rukhada_by_hng?igsh=Y3R4c3pxMWhpdTU5" target="_blank">
           <button className="w-14 h-14 rounded-full bg-pink-500 text-white flex items-center justify-center shadow-lg hover:bg-pink-600">
             <Instagram />
           </button>
