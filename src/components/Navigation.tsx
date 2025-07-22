@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Leaf, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,14 @@ const Navigation = () => {
             {/* Logo */}
             <Link href="/">
               <div className="flex items-center space-x-2 cursor-pointer">
-                <Leaf className="h-8 w-8 text-primary" />
+                {/* <Leaf className="h-8 w-8 text-primary" /> */}
+                <Image
+                  src="/gallery/logo.png" // Replace with your actual logo path
+                  alt="Rukhada Logo"
+                  width={40}
+                  height={40}
+                  className="h-8 w-8 object-contain"
+                />
                 <span className="text-2xl font-bold text-primary">Rukhada</span>
               </div>
             </Link>

@@ -162,6 +162,9 @@ const Footer = () => {
                         <div className="text-brown-text text-sm">
                             © 2024 Rukhada. All rights reserved. | Bringing nature to life, one space at a time.
                         </div>
+                        <div>
+                            Devleped by: Kanishk.Raj.Singh.Jhala
+                        </div>
                         <div className="flex space-x-6 text-sm text-brown-light">
                             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
                             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

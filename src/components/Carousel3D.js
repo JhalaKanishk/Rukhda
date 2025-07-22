@@ -1,9 +1,20 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import styles from '../styles/Carousel3D.module.css';
+import { useEffect, useState } from "react";
+import styles from "../styles/Carousel3D.module.css";
 
-const items = [0, 1, 2, 3, 4, 5, 6];
+const items = [
+  "gallery/s1.jpg",
+  "gallery/s2.jpg",
+  "gallery/s3.jpg",
+  "gallery/s4.jpg",
+  "gallery/s5.jpg",
+  "gallery/s6.jpg",
+  "gallery/s7.jpg",
+  "gallery/s8.jpg",
+  "gallery/s9.jpg",
+  "gallery/s10.jpg",
+];
 
 export default function Carousel3D() {
   const [centerIndex, setCenterIndex] = useState(3);
@@ -11,9 +22,9 @@ export default function Carousel3D() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCenterIndex((prev) => (prev + 1) % items.length);
-    }, 3000); // Change slide every 3 seconds
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -22,13 +33,11 @@ export default function Carousel3D() {
         {items.map((item, index) => {
           let offset = index - centerIndex;
 
-          // Wrap-around logic
-          if (offset < -Math.floor(items.length / 2)) {
-            offset += items.length;
-          }
-          if (offset > Math.floor(items.length / 2)) {
-            offset -= items.length;
-          }
+          if (offset < -Math.floor(items.length / 2)) offset += items.length;
+          if (offset > Math.floor(items.length / 2)) offset -= items.length;
+
+          // ✅ Skip if not in visible range
+          if (Math.abs(offset) > 3) return null;
 
           return (
             <li
@@ -37,7 +46,11 @@ export default function Carousel3D() {
                 styles[`pos${offset}`] || styles.hidden
               }`}
             >
-              {item}
+              <img
+                src={item}
+                alt={`Image ${index + 1}`}
+                className={styles.image}
+              />
             </li>
           );
         })}

@@ -1,6 +1,6 @@
-/* styles/Carousel3D.module.css */
+/* Wrapper container */
 .wrapper {
-  height: 100vh; /* This is too tall for mobile */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +8,7 @@
   overflow: hidden;
 }
 
+/* Carousel list */
 .gallery {
   list-style: none;
   display: flex;
@@ -22,6 +23,7 @@
   padding: 0;
 }
 
+/* Each card/image container */
 .card {
   position: absolute;
   width: 300px;
@@ -33,10 +35,23 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
   opacity: 0;
   transform: scale(0.7);
   z-index: 0;
+}
+
+/* Image inside card */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Hidden (fallback) */
+.hidden {
+  display: none;
 }
 
 /* Center card */
@@ -46,41 +61,56 @@
   z-index: 5;
 }
 
+/* Left and right of center */
 .pos-1 {
-  opacity: 0.6;
+  opacity: 0.3;
   transform: scale(0.85) translateX(-140px);
   z-index: 4;
 }
 
 .pos1 {
-  opacity: 0.6;
+  opacity: 0.3;
   transform: scale(0.85) translateX(140px);
   z-index: 4;
 }
-
-/* ✅ Responsive Fix */
+ 
+/* ✅ Responsive Mobile Fix */
 @media (max-width: 600px) {
   .wrapper {
-    height: auto; /* 🔧 Fixes the extra spacing */
-    padding-top: 2rem; /* optional fine-tuning */
+    height: auto;
+    padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
   .gallery {
     height: 220px;
+    max-width: 100%;
   }
 
   .card {
-    width: 200px;
-    height: 200px;
-    font-size: 1.5rem;
+    width: 180px;
+    height: 180px;
   }
 
   .pos-1 {
-    transform: scale(0.85) translateX(-100px);
+    transform: scale(0.85) translateX(-90px);
   }
 
   .pos1 {
-    transform: scale(0.85) translateX(100px);
+    transform: scale(0.85) translateX(90px);
+  }
+
+  .pos-2 {
+    transform: scale(0.6) translateX(-180px);
+  }
+
+  .pos2 {
+    transform: scale(0.6) translateX(180px);
+  }
+
+  .pos-3,
+  .pos3 {
+    transform: scale(0.5) translateX(250px);
+    opacity: 0.05;
   }
 }

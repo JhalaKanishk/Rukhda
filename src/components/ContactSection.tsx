@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,227 +9,242 @@ import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
 
 const ContactSection = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        message: ""
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    toast.success("Message Sent!", {
+      description:
+        "Thank you for contacting us. We will get back to you within 24 hours.",
     });
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: "Visit Our Nursery",
+      details: ["123 Green Valley Road", "Plant District, GC 12345"],
+      link: "https://maps.google.com",
+    },
+    {
+      icon: Phone,
+      title: "Call Us",
+      details: ["+1 (555) 123-PLANT", "+1 (555) 123-7526"],
+      link: "tel:+15551237526",
+    },
+    {
+      icon: Mail,
+      title: "Email Us",
+      details: ["info@Rukhada.com", "support@Rukhada.com"],
+      link: "mailto:info@Rukhada.com",
+    },
+    {
+      icon: Clock,
+      title: "Business Hours",
+      details: ["Mon-Fri: 8AM - 6PM", "Sat-Sun: 9AM - 5PM"],
+      link: null,
+    },
+  ];
 
-        toast.success("Message Sent!", {
-            description: "Thank you for contacting us. We will get back to you within 24 hours.",
-        });
+  return (
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-b from-background to-accent/10"
+    >
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              Get In Touch
+            </h2>
+            <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+            <p className="text-lg text-brown-text max-w-3xl mx-auto leading-relaxed">
+              Ready to start your green journey? We’re just a message away.
+              Whether it’s consultation, collaboration, or curiosity— Let’s
+              plant something together that lasts.
+            </p>
+          </div>
 
-        setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            message: ""
-        });
-    };
-
-    const contactInfo = [
-        {
-            icon: MapPin,
-            title: "Visit Our Nursery",
-            details: ["123 Green Valley Road", "Plant District, GC 12345"],
-            link: "https://maps.google.com"
-        },
-        {
-            icon: Phone,
-            title: "Call Us",
-            details: ["+1 (555) 123-PLANT", "+1 (555) 123-7526"],
-            link: "tel:+15551237526"
-        },
-        {
-            icon: Mail,
-            title: "Email Us",
-            details: ["info@Rukhada.com", "support@Rukhada.com"],
-            link: "mailto:info@Rukhada.com"
-        },
-        {
-            icon: Clock,
-            title: "Business Hours",
-            details: ["Mon-Fri: 8AM - 6PM", "Sat-Sun: 9AM - 5PM"],
-            link: null
-        }
-    ];
-
-    return (
-        <section id="contact" className="py-20 bg-gradient-to-b from-background to-accent/10">
-            <div className="container mx-auto px-4">
-                <div className="max-w-6xl mx-auto">
-                    {/* Header */}
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                            Get In Touch
-                        </h2>
-                        <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-                        <p className="text-lg text-brown-text max-w-3xl mx-auto leading-relaxed">
-                            Ready to bring nature into your space? Contact us for a free consultation and let us
-                            create your perfect green sanctuary together.
-                        </p>
-                    </div>
-
-                    <div className="grid lg:grid-cols-2 gap-12">
-                        {/* Contact Form */}
-                        <div className="bg-card p-8 rounded-2xl shadow-lg border border-primary/10">
-                            <h3 className="text-2xl font-bold text-primary mb-6">Send Us a Message</h3>
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid md:grid-cols-2 gap-4">
-                                    <div>
-                                        <Label htmlFor="name" className="text-brown-text">Full Name *</Label>
-                                        <Input
-                                            id="name"
-                                            name="name"
-                                            type="text"
-                                            value={formData.name}
-                                            onChange={handleInputChange}
-                                            required
-                                            autoFocus
-                                            className="mt-1 border border-primary/20 bg-white/50 placeholder:text-brown-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                                            placeholder="Your full name"
-                                        />
-                                    </div>
-                                    <div>
-                                        <Label htmlFor="phone" className="text-brown-text">Phone Number</Label>
-                                        <Input
-                                            id="phone"
-                                            name="phone"
-                                            type="tel"
-                                            value={formData.phone}
-                                            onChange={handleInputChange}
-                                            className="mt-1 border border-primary/20 bg-white/50 placeholder:text-brown-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                                            placeholder="Your phone number"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <Label htmlFor="email" className="text-brown-text">Email Address *</Label>
-                                    <Input
-                                        id="email"
-                                        name="email"
-                                        type="email"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                        required
-                                        className="mt-1 border border-primary/20 bg-white/50 placeholder:text-brown-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                                        placeholder="your.email@example.com"
-                                    />
-                                </div>
-
-                                <div>
-                                    <Label htmlFor="message" className="text-brown-text">Message *</Label>
-                                    <Textarea
-                                        id="message"
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleInputChange}
-                                        required
-                                        rows={6}
-                                        className="mt-1 border border-primary/20 bg-white/50 placeholder:text-brown-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
-                                        placeholder="Tell us about your space and what you have in mind..."
-                                    />
-                                </div>
-
-                                <Button type="submit" className="w-full group">
-                                    Send Message
-                                    <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </form>
-                        </div>
-
-                        {/* Contact Information */}
-                        <div className="space-y-8">
-                            <div>
-                                <h3 className="text-2xl font-bold text-primary mb-6">Contact Information</h3>
-                                <p className="text-brown-text mb-8 leading-relaxed">
-                                    We are here to help you create the perfect Rukhada. Reach out through any of these channels
-                                    and our friendly team will get back to you promptly.
-                                </p>
-                            </div>
-
-                            <div className="grid gap-6">
-                                {contactInfo.map((item, index) => {
-                                    const Icon = item.icon;
-                                    return (
-                                        <div
-                                            key={index}
-                                            className="flex items-start p-4 bg-accent/20 rounded-xl border border-primary/10 hover:bg-accent/30 transition-colors"
-                                        >
-                                            <div className="bg-primary/10 p-3 rounded-lg mr-4">
-                                                <Icon className="h-6 w-6 text-primary" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-primary mb-2">{item.title}</h4>
-                                                {item.details.map((detail, detailIndex) => (
-                                                    <p key={detailIndex} className="text-brown-text">
-                                                        {item.link && detailIndex === 0 ? (
-                                                            <a
-                                                                href={item.link}
-                                                                className="hover:text-primary transition-colors"
-                                                                target={item.link.startsWith('http') ? '_blank' : undefined}
-                                                                rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                                                            >
-                                                                {detail}
-                                                            </a>
-                                                        ) : (
-                                                            detail
-                                                        )}
-                                                    </p>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-
-                            {/* Quick Response Promise */}
-                            <div className="bg-gradient-to-r from-primary/5 to-accent/10 p-6 rounded-xl border border-primary/20">
-                                <h4 className="font-bold text-primary mb-2">Quick Response Guarantee</h4>
-                                <p className="text-brown-text text-sm leading-relaxed">
-                                    We typically respond to all inquiries within 2-4 hours during business hours.
-                                    For urgent plant care emergencies, call our dedicated support line.
-                                </p>
-                            </div>
-
-                            {/* Service Areas */}
-                            <div className="bg-card p-6 rounded-xl border border-primary/10">
-                                <h4 className="font-bold text-primary mb-3">Service Areas</h4>
-                                <p className="text-brown-text text-sm mb-3">
-                                    We proudly serve the following areas:
-                                </p>
-                                <div className="grid grid-cols-2 gap-2 text-sm text-brown-light">
-                                    <div>• Downtown District</div>
-                                    <div>• Garden Valley</div>
-                                    <div>• Tech Quarter</div>
-                                    <div>• Residential Hills</div>
-                                    <div>• Business Park</div>
-                                    <div>• Green Suburbs</div>
-                                </div>
-                                <p className="text-brown-light text-xs mt-3">
-                                    Do not see your area? Contact us - we may still be able to help!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-card p-8 rounded-2xl shadow-lg border border-primary/10">
+              <h3 className="text-2xl font-bold text-primary mb-6">
+                Send Us a Message
+              </h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="name" className="text-brown-text">
+                      Full Name *
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      type="text"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      autoFocus
+                      className="mt-1 border border-primary/20 bg-white/50 placeholder:text-brown-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="phone" className="text-brown-text">
+                      Phone Number
+                    </Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="mt-1 border border-primary/20 bg-white/50 placeholder:text-brown-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                      placeholder="Your phone number"
+                    />
+                  </div>
                 </div>
+
+                <div>
+                  <Label htmlFor="email" className="text-brown-text">
+                    Email Address *
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="mt-1 border border-primary/20 bg-white/50 placeholder:text-brown-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="message" className="text-brown-text">
+                    Message *
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={6}
+                    className="mt-1 border border-primary/20 bg-white/50 placeholder:text-brown-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                    placeholder="Tell us about your space and what you have in mind..."
+                  />
+                </div>
+
+                <Button type="submit" className="w-full group">
+                  Send Message
+                  <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </form>
             </div>
-            <Toaster />
-        </section>
-    );
+
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-primary mb-6">
+                  Contact Information
+                </h3>
+                <p className="text-brown-text mb-8 leading-relaxed">
+                  We are here to help you create the perfect Rukhada. Reach out
+                  through any of these channels and our friendly team will get
+                  back to you promptly.
+                </p>
+              </div>
+
+              <div className="grid gap-6">
+                {contactInfo.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="flex items-start p-4 bg-accent/20 rounded-xl border border-primary/10 hover:bg-accent/30 transition-colors"
+                    >
+                      <div className="bg-primary/10 p-3 rounded-lg mr-4">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-primary mb-2">
+                          {item.title}
+                        </h4>
+                        {item.details.map((detail, detailIndex) => (
+                          <p key={detailIndex} className="text-brown-text">
+                            {item.link && detailIndex === 0 ? (
+                              <a
+                                href={item.link}
+                                className="hover:text-primary transition-colors"
+                                target={
+                                  item.link.startsWith("http")
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel={
+                                  item.link.startsWith("http")
+                                    ? "noopener noreferrer"
+                                    : undefined
+                                }
+                              >
+                                {detail}
+                              </a>
+                            ) : (
+                              detail
+                            )}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Quick Response Promise */}
+              <div className="bg-gradient-to-r from-primary/5 to-accent/10 p-6 rounded-xl border border-primary/20">
+                <h4 className="font-bold text-primary mb-2">
+                  Quick Response Guarantee
+                </h4>
+                <p className="text-brown-text text-sm leading-relaxed">
+                  We typically respond to all inquiries within 2-4 hours during
+                  business hours. For urgent plant care emergencies, call our
+                  dedicated support line.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <Toaster />
+    </section>
+  );
 };
 
 export default ContactSection;

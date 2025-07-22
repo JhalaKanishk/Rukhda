@@ -1,39 +1,46 @@
-import { Leaf, MessageCircle, TrendingUp, Eye, ShieldCheck, Wind, Smile } from "lucide-react";
+import {
+  Leaf,
+  MessageCircle,
+  TrendingUp,
+  Eye,
+  ShieldCheck,
+  Wind,
+  Smile,
+} from "lucide-react";
 
 const AboutSection = () => {
- const features = [
-  {
-    icon: Wind,
-    title: "Freedom in Nature",
-    description: "We create calm, open, breathable spaces.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Prosperity Through Greenery",
-    description: "Growth for you, for us, and the planet.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Clear Communication",
-    description: "Understanding every client’s vision with depth.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Trust & Integrity",
-    description: "Building lasting bonds through honesty and action.",
-  },
-  {
-    icon: Eye,
-    title: "Transparency",
-    description: "From plan to plant, clarity is our policy.",
-  },
-  {
-    icon: Smile,
-    title: "Client Satisfaction",
-    description: "Your peace and pride in your garden is our ultimate goal.",
-  },
-];
-
+  const features = [
+    {
+      icon: Wind,
+      title: "Freedom in Nature",
+      description: "We create calm, open, breathable spaces.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Prosperity Through Greenery",
+      description: "Growth for you, for us, and the planet.",
+    },
+    {
+      icon: MessageCircle,
+      title: "Clear Communication",
+      description: "Understanding every client’s vision with depth.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Trust & Integrity",
+      description: "Building lasting bonds through honesty and action.",
+    },
+    {
+      icon: Eye,
+      title: "Transparency",
+      description: "From plan to plant, clarity is our policy.",
+    },
+    {
+      icon: Smile,
+      title: "Client Satisfaction",
+      description: "Your peace and pride in your garden is our ultimate goal.",
+    },
+  ];
 
   return (
     <section id="about" className="py-20 bg-background">
@@ -62,24 +69,39 @@ const AboutSection = () => {
                 Our Story
               </h3>
               <p className="text-brown-text mb-4 leading-relaxed">
-                Two different lives, one shared calling. Himanshu and Gaurav
-                once walked paths far from nature. But the longing for purpose
-                led them back to the roots—literally. Leaving behind routine
-                9-to-5 jobs, they chose to grow something meaningful. What
-                started as personal healing became a professional journey:
-                inspiring people to breathe better, live better, and reconnect
-                with green spaces.
+                We’re Himanshu and Gaurav – two individuals from different
+                professional backgrounds but connected by one deep-rooted
+                passion: gardening. Himanshu, an event manager by profession,
+                and Gaurav, a B.Com graduate, both excelled in our respective
+                careers. But what truly brought us together was our shared love
+                for plants.
               </p>
               <p className="text-brown-text mb-4 leading-relaxed">
-                Every plant we place and every design we create is thoughtfully
-                chosen to enhance your environment while considering factors
-                like lighting, maintenance requirements, and your personal style
-                preferences.
+                For Himanshu, the love for greenery started early, inspired by
+                his father, who introduced him to gardening. Over the years,
+                tending to plants became more than just a hobby – it became a
+                way of life. Gaurav, a close friend since Class 8, often watched
+                Himanshu deeply immersed in his garden. Eventually, that quiet
+                admiration turned into genuine interest. Encouraged by Himanshu,
+                Gaurav picked up gardening too – and soon, it became his passion
+                as well.
               </p>
               <p className="text-brown-text leading-relaxed">
-                Today, we are proud to be the leading plant service provider in
-                the region, helping thousands of people create their perfect
-                green sanctuary.
+                For years, it remained a beloved hobby for both of us. We
+                pursued different careers, focused on our professional growth,
+                and gardening stayed a personal retreat. But deep down, we
+                always knew we wanted to build something meaningful – together.
+              </p>
+              <p className="text-brown-text leading-relaxed">
+                We thought: Why not turn this passion into something bigger?
+                Something we could share with the world? That’s how RUKHADA was
+                born – a brand rooted in friendship, passion, and the belief
+                that greenery brings peace, beauty, and purpose to life.
+              </p>
+              <p className="text-brown-text leading-relaxed">
+                At RUKHADA, we don’t just sell services & plants – we share a
+                piece of our journey, our passion, and our dream of making the
+                world greener, one home at a time.
               </p>
             </div>
 
@@ -94,30 +116,6 @@ const AboutSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Features Grid */}
-          <h3 className="text-3xl text-center font-bold text-primary mb-8">Our Values</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="text-center p-6 rounded-xl bg-card border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h4 className="text-xl font-bold text-primary mb-3">
-                    {feature.title}
-                  </h4>
-                  <p className="text-brown-text leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              );
-            })}
           </div>
 
           {/* Services Section */}
@@ -202,6 +200,35 @@ const AboutSection = () => {
                   presents for every occasion.
                 </p>
               </div>
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="mt-16">
+            <h3 className="text-3xl text-center font-bold text-primary mb-8">
+              Our Values
+            </h3>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div
+                    key={index}
+                    className="text-center p-6 rounded-xl bg-card border border-primary/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h4 className="text-xl font-bold text-primary mb-3">
+                      {feature.title}
+                    </h4>
+                    <p className="text-brown-text leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
