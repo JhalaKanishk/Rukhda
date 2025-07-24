@@ -46,46 +46,51 @@
 /* Define CSS variables for the Rukhada theme */
 :root {
   --radius: 0.625rem;
-  --primary: #2D3015; /* Dark green for text and accents */
-  --foreground: #2D3015; /* Dark green for main text */
-  --background: #F5E8D0; /* Warm beige background */
-  --accent: #D4A373; /* Earthy brown for hover states */
-  --primary-light: rgba(212, 163, 115, 0.2); /* Light accent for subtle effects */
-  --card: #F9F1E0; /* Slightly lighter beige for cards */
-  --card-foreground: #2D3015; /* Dark green for card text */
-  --popover: #F9F1E0; /* Lighter beige for popovers */
-  --popover-foreground: #2D3015; /* Dark green for popover text */
-  --secondary: #8A6F47; /* Muted brown for secondary elements */
-  --secondary-foreground: #F5E8D0; /* Beige for secondary text */
-  --muted: #D9C1A2; /* Pale brown for muted elements */
-  --muted-foreground: #4A4E2E; /* Darker muted green */
+  --primary: #2d3015; /* Dark green for text and accents */
+  --foreground: #2d3015; /* Dark green for main text */
+  --background: #f5e8d0; /* Warm beige background */
+  --accent: #d4a373; /* Earthy brown for hover states */
+  --primary-light: rgba(
+    212,
+    163,
+    115,
+    0.2
+  ); /* Light accent for subtle effects */
+  --card: #f9f1e0; /* Slightly lighter beige for cards */
+  --card-foreground: #2d3015; /* Dark green for card text */
+  --popover: #f9f1e0; /* Lighter beige for popovers */
+  --popover-foreground: #2d3015; /* Dark green for popover text */
+  --secondary: #8a6f47; /* Muted brown for secondary elements */
+  --secondary-foreground: #f5e8d0; /* Beige for secondary text */
+  --muted: #d9c1a2; /* Pale brown for muted elements */
+  --muted-foreground: #4a4e2e; /* Darker muted green */
   --border: rgba(212, 163, 115, 0.3); /* Soft brown border */
-  --input: #D9C1A2; /* Pale brown for inputs */
-  --ring: #D4A373; /* Earthy brown for focus rings */
+  --input: #d9c1a2; /* Pale brown for inputs */
+  --ring: #d4a373; /* Earthy brown for focus rings */
 }
 
 .dark {
-  --background: #2D3015; /* Dark green background */
-  --foreground: #F5E8D0; /* Beige text */
-  --card: #3A3D1F; /* Darker green for cards */
-  --card-foreground: #F5E8D0; /* Beige for card text */
-  --popover: #3A3D1F; /* Darker green for popovers */
-  --popover-foreground: #F5E8D0; /* Beige for popover text */
-  --primary: #D4A373; /* Earthy brown for accents */
-  --primary-foreground: #F5E8D0; /* Beige for primary text */
-  --secondary: #8A6F47; /* Muted brown */
-  --secondary-foreground: #F5E8D0; /* Beige for secondary text */
-  --muted: #4A4E2E; /* Dark muted green */
-  --muted-foreground: #D9C1A2; /* Pale brown for muted text */
+  --background: #2d3015; /* Dark green background */
+  --foreground: #f5e8d0; /* Beige text */
+  --card: #3a3d1f; /* Darker green for cards */
+  --card-foreground: #f5e8d0; /* Beige for card text */
+  --popover: #3a3d1f; /* Darker green for popovers */
+  --popover-foreground: #f5e8d0; /* Beige for popover text */
+  --primary: #d4a373; /* Earthy brown for accents */
+  --primary-foreground: #f5e8d0; /* Beige for primary text */
+  --secondary: #8a6f47; /* Muted brown */
+  --secondary-foreground: #f5e8d0; /* Beige for secondary text */
+  --muted: #4a4e2e; /* Dark muted green */
+  --muted-foreground: #d9c1a2; /* Pale brown for muted text */
   --border: rgba(212, 163, 115, 0.4); /* Slightly more opaque border */
-  --input: #4A4E2E; /* Dark muted green for inputs */
-  --ring: #D4A373; /* Earthy brown for focus rings */
+  --input: #4a4e2e; /* Dark muted green for inputs */
+  --ring: #d4a373; /* Earthy brown for focus rings */
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    font-family: 'Georgia', serif; /* Rustic, nature-inspired font */
+    font-family: "Georgia", serif; /* Rustic, nature-inspired font */
   }
   body {
     @apply bg-background text-foreground;
@@ -141,7 +146,7 @@ nav a:hover {
 
 /* Underline animation for links */
 nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -167,7 +172,6 @@ button[aria-label="Toggle menu"] {
   cursor: pointer;
 }
 
-
 /* Mobile sidebar */
 .mobile-sidebar {
   background: var(--card);
@@ -188,7 +192,6 @@ button[aria-label="Toggle menu"] {
   border-radius: var(--radius);
   transition: all 0.3s ease;
 }
-
 
 .mobile-sidebar .bg-accent\/20 {
   background: rgba(212, 163, 115, 0.3);
@@ -225,8 +228,13 @@ svg.text-primary {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
-  background: linear-gradient(to bottom, #FFFFFF, rgba(245, 232, 208, 0.7) 50%, #F5E8D0); 
+  padding: 1.5rem 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    rgba(245, 232, 208, 0.7) 50%,
+    #f5e8d0
+  );
 }
 
 .gallery {
@@ -236,20 +244,20 @@ svg.text-primary {
   justify-content: center;
   position: relative;
   width: 100%;
-  max-width: 600px;
-  height: 320px;
-  perspective: 1000px;
-  margin: 0;
+  max-width: 500px; /* Reduced for better mobile fit */
+  height: 280px; /* Slightly smaller for mobile */
+  perspective: 800px; /* Adjusted for better 3D effect on smaller screens */
+  margin: 0 auto;
   padding: 0;
 }
 
 .card {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 260px; /* Slightly smaller for mobile */
+  height: 260px;
   background: var(--card);
   color: var(--card-foreground);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -272,78 +280,149 @@ svg.text-primary {
 
 .pos-1 {
   opacity: 0.7;
-  transform: scale(0.85) translateX(-160px);
+  transform: scale(0.85) translateX(-130px); /* Adjusted for smaller cards */
   z-index: 4;
 }
 
 .pos1 {
   opacity: 0.7;
-  transform: scale(0.85) translateX(160px);
+  transform: scale(0.85) translateX(130px); /* Adjusted for smaller cards */
   z-index: 4;
 }
 
-@media (max-width: 600px) {
-  .wrapper {
-    padding: 1.5rem 0;
-  }
-
-  .gallery {
-    height: 240px;
-  }
-
-  .card {
-    width: 200px;
-    height: 200px;
-    font-size: 1.2rem;
-    border-radius: var(--radius-md);
-  }
-
-  .pos-1 {
-    transform: scale(0.85) translateX(-110px);
-  }
-
-  .pos1 {
-    transform: scale(0.85) translateX(110px);
-  }
-}
-
-/* Rukhada Emblem as background or logo (optional styling) */
-/* .logo-emblem {
-  background-image: url('path-to-emblem-image.png'); 
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-} */
- 
-
+/* Swiper buttons */
 .swiper-button-next,
 .swiper-button-prev {
-  background-color: var(--background); /* Dark green */
-  color: var(--foreground);             /* Beige */
-  border-radius: 9999px;                /* Circular */
-  width: 44px;
-  height: 44px;
+  background-color: var(--background);
+  color: var(--foreground);
+  border-radius: 9999px;
+  width: 36px; /* Smaller for mobile */
+  height: 36px;
   display: flex;
-  padding: 50px;
+  padding: 0; /* Removed excessive padding */
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  background-color: #1d1f0f; /* Slightly darker green on hover */
-  color: #F5E8D0;             /* Beige */
+  background-color: #1d1f0f;
+  color: #f5e8d0;
   transform: scale(1.05);
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 16px;
+  font-size: 14px; /* Smaller for mobile */
   font-weight: bold;
   color: var(--foreground);
+}
+
+/* Enhanced button hover effects */
+.hero-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 163, 115, 0.2),
+    transparent
+  );
+  transition: left 0.3s ease;
+}
+
+.hero-cta:hover::before {
+  left: 100%;
+}
+
+/* Ensure carousel wrapper aligns with theme */
+.carousel-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%; /* Prevent overflow on mobile */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  /* Aligned with Tailwind's sm breakpoint */
+  .wrapper {
+    padding: 1rem 0; /* Reduced padding for mobile */
+  }
+
+  .gallery {
+    max-width: 90vw; /* Use viewport width to prevent overflow */
+    height: 200px; /* Smaller height for mobile */
+  }
+
+  .card {
+    width: 180px; /* Smaller cards for mobile */
+    height: 180px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+  }
+
+  .pos-1 {
+    transform: scale(0.8) translateX(-90px); /* Adjusted for smaller cards */
+  }
+
+  .pos1 {
+    transform: scale(0.8) translateX(90px); /* Adjusted for smaller cards */
+  }
+
+  .hero-cta {
+    padding: 0.75rem 1.25rem; /* More comfortable padding */
+    font-size: 1rem; /* Improved readability */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 32px; /* Even smaller for very small screens */
+    height: 32px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 12px;
+  }
+}
+
+/* Extra small screens (e.g., <400px) */
+@media (max-width: 400px) {
+  .gallery {
+    max-width: 85vw;
+    height: 160px;
+  }
+
+  .card {
+    width: 140px;
+    height: 140px;
+    font-size: 0.95rem;
+  }
+
+  .pos-1 {
+    transform: scale(0.75) translateX(-70px);
+  }
+
+  .pos1 {
+    transform: scale(0.75) translateX(70px);
+  }
+
+  .hero-cta {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
 }

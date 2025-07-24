@@ -7,6 +7,8 @@ import {
   Wind,
   Smile,
 } from "lucide-react";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card"
 
 const AboutSection = () => {
   const features = [
@@ -63,63 +65,92 @@ const AboutSection = () => {
           </div>
 
           {/* Story Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h3 className="text-3xl font-bold text-primary mb-6">
-                Our Story
-              </h3>
-              <p className="text-2xl font-bold text-primary mb-6">
-                The Roots of RUKHADA
-              </p>
-              <p className="text-brown-text mb-4 leading-relaxed">
-                We’re Himanshu and Gaurav – two individuals from different
-                professional backgrounds but connected by one deep-rooted
-                passion: gardening. Himanshu, an event manager by profession,
-                and Gaurav, a B.Com graduate, both excelled in our respective
-                careers. But what truly brought us together was our shared love
-                for plants.
-              </p>
-              <p className="text-brown-text mb-4 leading-relaxed">
-                For Himanshu, the love for greenery started early, inspired by
-                his father, who introduced him to gardening. Over the years,
-                tending to plants became more than just a hobby – it became a
-                way of life. Gaurav, a close friend since Class 8, often watched
-                Himanshu deeply immersed in his garden. Eventually, that quiet
-                admiration turned into genuine interest. Encouraged by Himanshu,
-                Gaurav picked up gardening too – and soon, it became his passion
-                as well.
-              </p>
-              <p className="text-brown-text leading-relaxed">
-                For years, it remained a beloved hobby for both of us. We
-                pursued different careers, focused on our professional growth,
-                and gardening stayed a personal retreat. But deep down, we
-                always knew we wanted to build something meaningful – together.
-              </p>
-              <p className="text-brown-text leading-relaxed">
-                We thought: Why not turn this passion into something bigger?
-                Something we could share with the world? That’s how RUKHADA was
-                born – a brand rooted in friendship, passion, and the belief
-                that greenery brings peace, beauty, and purpose to life.
-              </p>
-              <p className="text-brown-text leading-relaxed">
-                At RUKHADA, we don’t just sell services & plants – we share a
-                piece of our journey, our passion, and our dream of making the
-                world greener, one home at a time.
-              </p>
-            </div>
+          <Card className="shadow-2xl border-0  backdrop-blur-sm">
+            <CardContent className="p-8 md:p-12">
+              <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+                {/* Content Section - Takes 3 columns */}
+                <div className="lg:col-span-3 space-y-6">
+                  <div className="space-y-4">
+                    <h3 className="text-3xl font-bold text-primary">
+                      Our Story
+                    </h3>
+                    <p className="text-2xl font-bold text-primary">
+                      The Roots of RUKHADA
+                    </p>
+                  </div>
 
-            <div className="relative">
-              <div className="bg-gradient-to-br from-primary/10 to-accent/20 rounded-2xl p-8 h-80 flex items-center justify-center">
-                <div className="text-center">
-                  <Leaf className="h-20 w-20 text-primary mx-auto mb-4" />
-                  <h4 className="text-2xl font-bold text-primary mb-2">
-                    5000+
-                  </h4>
-                  <p className="text-brown-text">Happy Plants Placed</p>
+                  <div className="space-y-4 text-brown-text leading-relaxed">
+                    <p>
+                      We are Himanshu and Gaurav – two individuals from different
+                      professional backgrounds but connected by one deep-rooted
+                      passion: gardening. Himanshu, an event manager by
+                      profession, and Gaurav, a B.Com graduate, both excelled in
+                      our respective careers. But what truly brought us together
+                      was our shared love for plants.
+                    </p>
+
+                    <p>
+                      For Himanshu, the love for greenery started early,
+                      inspired by his father, who introduced him to gardening.
+                      Over the years, tending to plants became more than just a
+                      hobby – it became a way of life. Gaurav, a close friend
+                      since Class 8, often watched Himanshu deeply immersed in
+                      his garden. Eventually, that quiet admiration turned into
+                      genuine interest. Encouraged by Himanshu, Gaurav picked up
+                      gardening too – and soon, it became his passion as well.
+                    </p>
+
+                    <p>
+                      For years, it remained a beloved hobby for both of us. We
+                      pursued different careers, focused on our professional
+                      growth, and gardening stayed a personal retreat. But deep
+                      down, we always knew we wanted to build something
+                      meaningful – together.
+                    </p>
+
+                    <p>
+                      We thought: Why not turn this passion into something
+                      bigger? Something we could share with the world? That is
+                      how RUKHADA was born – a brand rooted in friendship,
+                      passion, and the belief that greenery brings peace,
+                      beauty, and purpose to life.
+                    </p>
+
+                    <p>
+                      At RUKHADA, we do not just sell services & plants – we
+                      share a piece of our journey, our passion, and our dream
+                      of making the world greener, one home at a time.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Image Section - Takes 2 columns */}
+                <div className="lg:col-span-2 flex justify-center lg:justify-end">
+                  <div className="relative">
+                    {/* Background gradient card */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/20 rounded-2xl transform rotate-3 shadow-lg"></div>
+
+                    {/* Main image container */}
+                    <div className="relative bg-white rounded-2xl p-2 shadow-xl">
+                      <div className="w-80 h-80 lg:w-96 lg:h-96 overflow-hidden rounded-xl">
+                        <Image
+                          src="/gallery/owner.JPG"
+                          alt="Himanshu and Gaurav - Founders of RUKHADA"
+                          width={400}
+                          height={400}
+                          className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Decorative elements */}
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full shadow-md"></div>
+                    <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-accent/30 rounded-full shadow-md"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
 
           {/* Services Section */}
           <div className="mt-16 text-center">
