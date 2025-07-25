@@ -102,7 +102,7 @@ const Footer = () => {
             </div>
 
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Transforming spaces with nature's beauty. We specialize in plant
+              Transforming spaces with natures beauty. We specialize in plant
               care, interior plant décor, and creating peaceful green
               environments for homes, offices, and special events.
             </p>

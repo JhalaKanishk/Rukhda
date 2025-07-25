@@ -406,7 +406,7 @@ const AboutSection = () => {
                 Ready to Transform Your Space?
               </h4>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Let's discuss your vision and create a personalized plan that
+                Let us discuss your vision and create a personalized plan that
                 brings your dream garden to life.
               </p>
               <button className="bg-background text-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">

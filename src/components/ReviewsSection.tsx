@@ -5,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 const ReviewsSection = () => {
   const reviews = [
@@ -94,8 +95,8 @@ const ReviewsSection = () => {
               <div className="w-12 h-1 bg-primary rounded-full"></div>
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Don't just take our word for it. Hear from our satisfied customers
-              who have transformed their spaces with Rukhada's expert plant care
+              Do not just take our word for it. Hear from our satisfied customers
+              who have transformed their spaces with Rukhadas expert plant care
               and décor services.
             </p>
           </div>
@@ -153,7 +154,7 @@ const ReviewsSection = () => {
                     <div className="relative z-10 border-t border-border/30 pt-6">
                       <div className="flex items-center space-x-4">
                         <div className="relative">
-                          <img
+                          <Image
                             src={review.avatar || "/placeholder.svg"}
                             alt={review.name}
                             className="w-14 h-14 rounded-full object-cover border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300"
@@ -167,7 +168,6 @@ const ReviewsSection = () => {
                           <p className="text-muted-foreground text-sm font-medium">
                             {review.role}
                           </p>
-                           
                         </div>
                       </div>
                     </div>
