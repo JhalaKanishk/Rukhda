@@ -78,9 +78,10 @@ const ContactSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <span className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:from-accent group-hover:to-primary transition-all duration-300">
               Get In Touch
-            </h2>
+            </span>
+
             <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-lg text-brown-text max-w-3xl mx-auto leading-relaxed">
               Ready to start your green journey? We’re just a message away.
@@ -115,7 +116,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <Label htmlFor="phone" className="text-brown-text">
-                      Phone Number
+                      Phone Number *
                     </Label>
                     <Input
                       id="phone"
@@ -161,7 +162,7 @@ const ContactSection = () => {
                   />
                 </div>
 
-                <Button type="submit" className="w-full group">
+                <Button type="submit" className="w-full group text-amber-50">
                   Send Message
                   <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -237,7 +238,6 @@ const ContactSection = () => {
                   dedicated support line.
                 </p>
               </div>
-
             </div>
           </div>
         </div>

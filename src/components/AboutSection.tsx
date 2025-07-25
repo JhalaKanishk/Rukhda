@@ -49,10 +49,16 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            {/* <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
               About Rukhada
-            </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
+            </h2> */}
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
+              <span className="block text-primary">About</span>
+              <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                Rukhada
+              </span>
+            </h1>
+            <div className="w-44 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-lg text-brown-text max-w-6xl mx-auto leading-relaxed">
               RUKHADA is more than a name—it’s a feeling. Founded by Himanshu
               and Gaurav, two souls deeply connected to nature, the brand stands
@@ -149,86 +155,263 @@ const AboutSection = () => {
 
           {/* Services Section */}
           <div className="mt-16 text-center">
-            <h3 className="text-3xl font-bold text-primary mb-8">
-              Our Services
-            </h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">
-                  Landscaping
-                </h4>
-                <p className="text-brown-text">
-                  Designing outdoor environments with artistic vision and
-                  precision, using 2D & 3D visuals to align perfectly with your
-                  dream.
-                </p>
+            <div className="mb-12">
+              <h3 className="text-4xl font-bold text-primary mb-4">
+                Our Services
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                From concept to creation, we bring your garden dreams to life
+                with expert care and sustainable practices
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Service 1 */}
+              <div className="group relative p-8 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    Landscaping
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Designing outdoor environments with artistic vision and
+                    precision, using 2D & 3D visuals to align perfectly with
+                    your dream.
+                  </p>
+                </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">
-                  Garden Execution
-                </h4>
-                <p className="text-brown-text">
-                  Turning blueprints into blooming realities—crafted with
-                  detail, care, and respect for nature.
-                </p>
+
+              {/* Service 2 */}
+              <div className="group relative p-8 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    Garden Execution
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Turning blueprints into blooming realities—crafted with
+                    detail, care, and respect for nature.
+                  </p>
+                </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">
-                  Vertical Gardens
-                </h4>
-                <p className="text-brown-text">
-                  Sustaining the beauty we create through expert care and
-                  seasonal upkeep.
-                </p>
+
+              {/* Service 3 */}
+              <div className="group relative p-8 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    Vertical Gardens
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Sustaining the beauty we create through expert care and
+                    seasonal upkeep.
+                  </p>
+                </div>
               </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">
-                  Plant Home Delivery
-                </h4>
-                <p className="text-brown-text">
-                  Healthy plants, delivered with care—right to your doorstep,
-                  ready to grow.
-                </p>
+
+              {/* Service 4 */}
+              <div className="group relative p-8 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M9 1v6m6-6v6"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    Plant Home Delivery
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Healthy plants, delivered with care—right to your doorstep,
+                    ready to grow.
+                  </p>
+                </div>
+              </div>
+
+              {/* Service 5 */}
+              <div className="group relative p-8 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    Eco-Friendly Practices
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We promote eco-friendly practices and sustainable living
+                    through our plant care approaches and materials.
+                  </p>
+                </div>
+              </div>
+
+              {/* Service 6 */}
+              <div className="group relative p-8 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    Garden Styling
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Constantly exploring new techniques and designs to create
+                    unique, thriving gardens for our clients.
+                  </p>
+                </div>
+              </div>
+
+              {/* Service 7 */}
+              <div className="group relative p-8 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    Site Visits & Consultancy
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Offering expert advice, ideas, and solutions—tailored to
+                    your space and vision.
+                  </p>
+                </div>
+              </div>
+
+              {/* Service 8 */}
+              <div className="group relative p-8 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                    <svg
+                      className="w-8 h-8 text-primary"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v13m0-13V6a2 2 0 112 0v1m-2 0V6a2 2 0 00-2 0v1m2 0V4.5a2 2 0 00-2 0v1.5m2 0h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="text-xl font-bold text-primary mb-4 group-hover:text-primary/90 transition-colors">
+                    Plant Gifting
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Gifting green is gifting life—choose meaningful,
+                    eco-friendly presents for every occasion.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">
-                  Vertical Gardens
-                </h4>
-                <p className="text-brown-text">
-                  We promote eco-friendly practices and sustainable living
-                  through our plant care approaches and materials.
-                </p>
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">
-                  Garden Styling
-                </h4>
-                <p className="text-brown-text">
-                  Constantly exploring new techniques and designs to create
-                  unique, thriving Rukhadas for our clients.
-                </p>
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">
-                  Site Visits & Consultancy
-                </h4>
-                <p className="text-brown-text">
-                  Offering expert advice, ideas, and solutions—tailored to your
-                  space and vision.
-                </p>
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-primary mb-3">
-                  Plant Gifting
-                </h4>
-                <p className="text-brown-text">
-                  Gifting green is gifting life—choose meaningful, eco-friendly
-                  presents for every occasion.
-                </p>
-              </div>
+            {/* Call to Action */}
+            <div className="mt-16 p-8 bg-gradient-to-r from-primary/5 to-accent/5 rounded-2xl border border-border/50">
+              <h4 className="text-2xl font-bold text-primary mb-4">
+                Ready to Transform Your Space?
+              </h4>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Let's discuss your vision and create a personalized plan that
+                brings your dream garden to life.
+              </p>
+              <button className="bg-background text-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                Get Free Consultation
+              </button>
             </div>
           </div>
 

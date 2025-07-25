@@ -1,180 +1,267 @@
-'use client'
-import { Leaf, Instagram, Facebook, MessageCircle, Mail, Phone, MapPin } from "lucide-react";
+"use client";
+import {
+  Leaf,
+  Instagram,
+  Facebook,
+  MessageCircle,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+} from "lucide-react";
+import type React from "react";
+
+import { useState } from "react";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
-    const quickLinks = [
-        { name: "Home", href: "#home" },
-        { name: "About Us", href: "#about" },
-        { name: "Service Plans", href: "#plans" },
-        { name: "Gallery", href: "#gallery" },
-        { name: "Customer Reviews", href: "#reviews" },
-        { name: "Contact", href: "#contact" }
-    ];
+  const quickLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About Us", href: "#about" },
+    { name: "Service Plans", href: "#plans" },
+    { name: "Gallery", href: "#gallery" },
+    { name: "Customer Reviews", href: "#reviews" },
+    { name: "Contact", href: "#contact" },
+  ];
 
-    const services = [
-        "Indoor Plant Care",
-        "Balcony Gardens",
-        "Office Rukhadas",
-        "Event Decoration",
-        "Plant Consultation",
-        "Emergency Care"
-    ];
+  const services = [
+    "Indoor Plant Care",
+    "Balcony Gardens",
+    "Office Gardens",
+    "Event Decoration",
+    "Plant Consultation",
+    "Emergency Care",
+  ];
 
-    const socialLinks = [
-        {
-            icon: Instagram,
-            name: "Instagram",
-            href: "https://instagram.com/Rukhada",
-            color: "hover:text-pink-500"
-        },
-        {
-            icon: Facebook,
-            name: "Facebook",
-            href: "https://facebook.com/Rukhada",
-            color: "hover:text-blue-500"
-        },
-        {
-            icon: MessageCircle,
-            name: "Pinterest",
-            href: "https://pinterest.com/Rukhada",
-            color: "hover:text-red-500"
-        }
-    ];
+  const socialLinks = [
+    {
+      icon: Instagram,
+      name: "Instagram",
+      href: "https://instagram.com/Rukhada",
+      color: "hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500",
+      followers: "12.5K",
+    },
+    {
+      icon: Facebook,
+      name: "Facebook",
+      href: "https://facebook.com/Rukhada",
+      color: "hover:bg-blue-600",
+      followers: "8.2K",
+    },
+    {
+      icon: MessageCircle,
+      name: "WhatsApp",
+      href: "https://wa.me/1234567890",
+      color: "hover:bg-green-500",
+      followers: "24/7",
+    },
+  ];
 
-    const scrollToSection = (href: string) => {
-        const element = document.querySelector(href);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-    return (
-        <footer className="bg-gradient-to-b from-background to-primary/5 border-t border-primary/10">
-            {/* Main Footer Content */}
-            <div className="container mx-auto px-4 py-16">
-                <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-                    {/* Company Info */}
-                    <div className="space-y-6">
-                        <div className="flex items-center space-x-2">
-                            <Leaf className="h-8 w-8 text-primary" />
-                            <span className="text-2xl font-bold text-primary">Rukhada</span>
-                        </div>
-                        <p className="text-brown-text leading-relaxed">
-                            Transforming spaces with natures beauty. We specialize in plant care, interior plant décor,
-                            and creating peaceful green environments for homes, offices, and special events.
-                        </p>
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setIsSubscribed(true);
+      setTimeout(() => {
+        setIsSubscribed(false);
+        setEmail("");
+      }, 3000);
+    }
+  };
 
-                        {/* Contact Info */}
-                        <div className="space-y-3">
-                            <div className="flex items-center space-x-3 text-brown-text">
-                                <Phone className="h-4 w-4 text-primary" />
-                                <span>+1 (555) 123-PLANT</span>
-                            </div>
-                            <div className="flex items-center space-x-3 text-brown-text">
-                                <Mail className="h-4 w-4 text-primary" />
-                                <span>info@Rukhada.com</span>
-                            </div>
-                            <div className="flex items-center space-x-3 text-brown-text">
-                                <MapPin className="h-4 w-4 text-primary" />
-                                <span>123 Green Valley Road, Plant District</span>
-                            </div>
-                        </div>
+  return (
+    <footer className="relative bg-gradient-to-b from-background via-primary/5 to-primary/10 border-t border-primary/20 overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-accent rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-primary rounded-full blur-2xl animate-pulse delay-500"></div>
+      </div>
 
-                        {/* Social Media */}
-                        <div className="flex space-x-4">
-                            {socialLinks.map((social) => {
-                                const Icon = social.icon;
-                                return (
-                                    <a
-                                        key={social.name}
-                                        href={social.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className={`p-3 bg-primary/10 rounded-full text-primary transition-all duration-300 hover:bg-primary hover:text-white ${social.color}`}
-                                    >
-                                        <Icon className="h-5 w-5" />
-                                    </a>
-                                );
-                            })}
-                        </div>
-                    </div>
-
-                    {/* Quick Links */}
-                    <div>
-                        <h3 className="text-xl font-bold text-primary mb-6">Quick Links</h3>
-                        <div className="space-y-3">
-                            {quickLinks.map((link) => (
-                                <button
-                                    key={link.name}
-                                    onClick={() => scrollToSection(link.href)}
-                                    className="block text-brown-text hover:text-primary transition-colors cursor-pointer"
-                                >
-                                    {link.name}
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Services */}
-                    <div>
-                        <h3 className="text-xl font-bold text-primary mb-6">Our Services</h3>
-                        <ul className="space-y-3">
-                            {services.map((service) => (
-                                <li key={service} className="text-brown-text hover:text-primary transition-colors cursor-pointer">
-                                    {service}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Newsletter */}
-                    <div>
-                        <h3 className="text-xl font-bold text-primary mb-6">Stay Connected</h3>
-                        <p className="text-brown-text mb-6 leading-relaxed">
-                            Subscribe to our newsletter for plant care tips, seasonal advice, and special offers.
-                        </p>
-
-
-                        {/* Trust Badges */}
-                        <div className="mt-6 space-y-2 text-sm text-brown-light">
-                            <div className="flex items-center space-x-2">
-                                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>Licensed & Insured</span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>Eco-Certified Practices</span>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                                <span>24/7 Plant Support</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="group flex items-center space-x-3 cursor-pointer">
+              <div className="relative">
+                <Leaf className="h-10 w-10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <span className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:from-accent group-hover:to-primary transition-all duration-300">
+                Rukhada
+              </span>
             </div>
 
-            {/* Bottom Footer */}
-            <div className="border-t border-primary/10 bg-primary/5">
-                <div className="container mx-auto px-4 py-6">
-                    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                        <div className="text-brown-text text-sm">
-                            © 2024 Rukhada. All rights reserved. | Bringing nature to life, one space at a time.
-                        </div>
-                        <div>
-                            Devleped by: Kanishk.Raj.Singh.Jhala
-                        </div>
-                        <div className="flex space-x-6 text-sm text-brown-light">
-                            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-                            <a href="#" className="hover:text-primary transition-colors">Plant Care Guide</a>
-                        </div>
-                    </div>
-                </div>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              Transforming spaces with nature's beauty. We specialize in plant
+              care, interior plant décor, and creating peaceful green
+              environments for homes, offices, and special events.
+            </p>
+
+            {/* Enhanced Contact Info */}
+            <div className="space-y-4">
+              {[
+                {
+                  icon: Phone,
+                  text: "+1 (555) 123-PLANT",
+                  href: "tel:+15551237526",
+                },
+                {
+                  icon: Mail,
+                  text: "info@Rukhada.com",
+                  href: "mailto:info@rukhada.com",
+                },
+                {
+                  icon: MapPin,
+                  text: "123 Green Valley Road, Plant District",
+                  href: "#",
+                },
+              ].map((contact, index) => (
+                <a
+                  key={index}
+                  href={contact.href}
+                  className="group flex items-center space-x-3 text-muted-foreground hover:text-primary transition-all duration-300 cursor-pointer"
+                >
+                  <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                    <contact.icon className="h-4 w-4" />
+                  </div>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">
+                    {contact.text}
+                  </span>
+                </a>
+              ))}
             </div>
-        </footer>
-    );
+
+            {/* Enhanced Social Media */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-primary">Follow Us</h4>
+              <div className="flex space-x-3">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <div key={social.name} className="group relative">
+                      <a
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`relative flex items-center justify-center w-12 h-12 bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl text-primary transition-all duration-300 hover:scale-110 hover:text-white hover:shadow-lg hover:shadow-primary/25 ${social.color} overflow-hidden`}
+                      >
+                        <Icon className="h-5 w-5 relative z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                      </a>
+
+                      {/* Tooltip */}
+                      <div className="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1 bg-card/90 backdrop-blur-sm border border-border/50 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap">
+                        <div className="text-primary font-semibold">
+                          {social.name}
+                        </div>
+                        <div className="text-muted-foreground text-xs">
+                          {social.followers}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Quick Links */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-primary relative">
+              Quick Links
+              <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+            </h3>
+            <div className="space-y-3">
+              {quickLinks.map((link, index) => (
+                <button
+                  key={link.name}
+                  onClick={() => scrollToSection(link.href)}
+                  className="group flex items-center space-x-2 text-muted-foreground hover:text-primary transition-all duration-300 cursor-pointer w-full text-left"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium">
+                    {link.name}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Enhanced Services */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-bold text-primary relative">
+              Our Services
+              <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+            </h3>
+            <ul className="space-y-3">
+              {services.map((service, index) => (
+                <li
+                  key={service}
+                  className="group flex items-center space-x-3 text-muted-foreground hover:text-primary transition-all duration-300 cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="w-2 h-2 bg-primary/50 rounded-full group-hover:bg-primary group-hover:scale-125 transition-all duration-300"></div>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium">
+                    {service}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Enhanced Bottom Footer */}
+      <div className="border-t border-primary/20 bg-primary/5 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+            <div className="text-muted-foreground text-center lg:text-left">
+              <div className="font-medium">
+                © 2024 Rukhada. All rights reserved.
+              </div>
+              <div className="text-sm mt-1">
+                Bringing nature to life, one space at a time.
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="text-sm text-muted-foreground">
+                Developed with 💚 by
+              </div>
+              <div className="font-semibold text-primary hover:text-accent transition-colors cursor-pointer">
+                Kanishk.Raj.Singh.Jhala
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center lg:justify-end space-x-6 text-sm">
+              {["Privacy Policy", "Terms of Service", "Plant Care Guide"].map(
+                (link) => (
+                  <a
+                    key={link}
+                    href="#"
+                    className="text-muted-foreground hover:text-primary transition-all duration-300 hover:underline underline-offset-4 decoration-primary/50"
+                  >
+                    {link}
+                  </a>
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
