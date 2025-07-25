@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Phone, Instagram, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CircularPopup() {
   const [open, setOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function CircularPopup() {
         onClick={() => setOpen(!open)}
         className="w-16 h-16 bg-card/80 backdrop-blur-md border border-[#2d3015]/70 border-[2px] rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110"
       >
-        <img src="/gallery/logo.png" alt="Toggle Icon" className="w-14 h-14" />
+        <Image src="/gallery/logo.png" alt="Toggle Icon" className="w-14 h-14" />
       </button>
     </div>
   );

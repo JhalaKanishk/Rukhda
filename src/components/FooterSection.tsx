@@ -11,11 +11,7 @@ import {
 } from "lucide-react";
 import type React from "react";
 
-import { useState } from "react";
-
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const quickLinks = [
     { name: "Home", href: "#home" },
@@ -66,16 +62,6 @@ const Footer = () => {
     }
   };
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setIsSubscribed(true);
-      setTimeout(() => {
-        setIsSubscribed(false);
-        setEmail("");
-      }, 3000);
-    }
-  };
 
   return (
     <footer className="relative bg-gradient-to-b from-background via-primary/5 to-primary/10 border-t border-primary/20 overflow-hidden">
