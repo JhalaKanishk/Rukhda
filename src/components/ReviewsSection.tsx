@@ -95,9 +95,9 @@ const ReviewsSection = () => {
               <div className="w-12 h-1 bg-primary rounded-full"></div>
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Do not just take our word for it. Hear from our satisfied customers
-              who have transformed their spaces with Rukhadas expert plant care
-              and décor services.
+              Do not just take our word for it. Hear from our satisfied
+              customers who have transformed their spaces with Rukhadas expert
+              plant care and décor services.
             </p>
           </div>
 
@@ -143,11 +143,9 @@ const ReviewsSection = () => {
                       </div>
 
                       {/* Review Text with better typography */}
-                      <div className="mb-8">
-                        <p className="text-muted-foreground leading-relaxed text-center italic text-lg font-medium">
-                          "{review.text}"
-                        </p>
-                      </div>
+                      <p className="text-muted-foreground leading-relaxed text-center italic text-lg font-medium">
+                        &quot;{review.text}&quot;
+                      </p>
                     </div>
 
                     {/* Enhanced Author Info */}

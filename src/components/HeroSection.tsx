@@ -148,7 +148,7 @@ export default function HeroSection() {
 
         {/* Social Media Quick Links */}
         <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col space-y-3">
-          {socialLinks.map((social, index) => (
+          {socialLinks.map((social) => (
             <a
               key={social.label}
               href={social.href}
