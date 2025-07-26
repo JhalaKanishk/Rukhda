@@ -94,14 +94,10 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="group relative bg-primary text-background px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
                 <span className="relative z-10 flex items-center justify-center space-x-2">
-                  <span className="text-background">Get Started</span>
+                  <span className="text-background">Learn More</span>
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-              </button>
-
-              <button className="group bg-card/80 backdrop-blur-sm text-primary border-2 border-primary/20 px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-lg hover:shadow-xl">
-                Learn More
               </button>
             </div>
 

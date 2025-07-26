@@ -49,16 +49,25 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/">
-              <div className="flex items-center space-x-2 cursor-pointer">
+              <div className="flex heading items-center space-x-2 cursor-pointer">
                 {/* <Leaf className="h-8 w-8 text-primary" /> */}
                 <Image
                   src="/gallery/logo.png" // Replace with your actual logo path
                   alt="Rukhada Logo"
-                  width={80}
-                  height={80}
-                    className="h-8 w-8 object-contain border-3 border-primary rounded-full"
+                  width={200}
+                  height={200}
+                  className="h-8 w-8 img object-contain border-2 border-primary rounded-full"
                 />
-                <span className="text-2xl font-bold text-primary">Rukhada</span>
+                {/* <span className="text-2xl font-bold text-primary">RUKHADA</span>
+                <p>ALL THNGS GROW WITH LOVE</p> */}
+                <div className="flex flex-col conatineHead items-center">
+                  <span className="text-2xl font-bold text-primary">
+                    RUKHADA
+                  </span>
+                  <p className="text-sm tagline text-muted-foreground tracking-wide">
+                    ALL THINGS GROW WITH LOVE
+                  </p>
+                </div>
               </div>
             </Link>
 
@@ -139,12 +148,12 @@ const Navigation = () => {
 
           {/* Sidebar Menu */}
           <div className="p-6">
-            <nav className="space-y-4">
+            <nav className="space-y-4 navPhone">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left py-3 px-4 rounded-lg text-foreground hover:bg-accent hover:text-primary transition-colors font-medium"
+                  className="navbtn block w-full text-left py-3 px-4 rounded-lg text-foreground  font-medium"
                 >
                   {item.name}
                 </button>

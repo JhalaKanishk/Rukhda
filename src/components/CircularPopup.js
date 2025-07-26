@@ -45,7 +45,14 @@ export default function CircularPopup() {
         onClick={() => setOpen(!open)}
         className="w-16 h-16 bg-card/80 backdrop-blur-md border border-[#2d3015]/70 border-[2px] rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110"
       >
-        <Image src="/gallery/logo.png" alt="Toggle Icon" className="w-14 h-14" />
+        {/* <Image src="/gallery/logo.png" alt="Toggle Icon" className="w-14 h-14" /> */}
+        <Image
+  src="/gallery/logo.png"
+  alt="Toggle Icon"
+  width={56} // 14 * 4 = 56px
+  height={56}
+  className="w-14 h-14"
+/>
       </button>
     </div>
   );

@@ -159,6 +159,9 @@ const AboutSection = () => {
               <h3 className="text-4xl font-bold text-primary mb-4">
                 Our Services
               </h3>
+              <div className="flex items-center justify-center mb-8">
+                <div className="w-40 h-1 bg-primary rounded-full"></div>
+              </div>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 From concept to creation, we bring your garden dreams to life
                 with expert care and sustainable practices
@@ -417,9 +420,12 @@ const AboutSection = () => {
 
           {/* Features Grid */}
           <div className="mt-16">
-            <h3 className="text-3xl text-center font-bold text-primary mb-8">
-              Our Values
-            </h3>
+             <h3 className="text-4xl text-center font-bold text-primary mb-4">
+                Our Values
+              </h3>
+            <div className="flex items-center justify-center mb-8">
+              <div className="w-40 h-1 bg-primary rounded-full"></div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => {

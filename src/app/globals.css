@@ -355,6 +355,15 @@ svg.text-primary {
   max-width: 100%; /* Prevent overflow on mobile */
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
 /* Mobile-specific styles */
 @media (max-width: 640px) {
   /* Aligned with Tailwind's sm breakpoint */
@@ -398,6 +407,7 @@ svg.text-primary {
   .swiper-button-prev::after {
     font-size: 12px;
   }
+
 }
 
 /* Extra small screens (e.g., <400px) */
@@ -424,5 +434,69 @@ svg.text-primary {
   .hero-cta {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
+  }
+}
+
+nav {
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Remove styles for mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  nav {
+    transition: none;
+    background: #b79360;
+    /* box-shadow: none !important; */
+    border-bottom: none !important;
+    /* backdrop-filter: none !important; */
+  }
+
+  .heading {
+    height: 100px;
+    width: 210px;
+  }
+
+  .img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tagline {
+    font-size: 9px;
+    margin-top: -5px;
+    margin-left: 7px;
+  }
+
+  .navPhone {
+    background: #f5e8d0 !important;
+    transition: none;
+  }
+
+  .navbtn {
+    background: #f5e8d0 !important;
+    width: fit-content;
+  }
+
+  p {
+    color: var(--primary);
+  }
+
+  .galNav {
+    background-color: #f5e8d0;
+    box-shadow: none !important;
+  }
+
+  .galNav:hover {
+    /* background-color: #d4a373; */
+    box-shadow: none !important;
+    background-color: #f5e8d0;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

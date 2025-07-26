@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+
 const categories = [
   {
     id: "landscaping",
@@ -15,37 +16,136 @@ const categories = [
       "/gallery/l2.JPG",
       "/gallery/l3.JPG",
       "/gallery/l4.JPG",
+      "/gallery/l5.JPG",
+      "/gallery/l6.JPG",
+      "/gallery/l7.JPG",
+      "/gallery/l8.JPG",
+      "/gallery/l9.JPG",
+      "/gallery/l10.JPG",
+
+      
+      "/gallery/l11.JPG",
+      "/gallery/l12.JPG",
+      "/gallery/l13.JPG",
+      "/gallery/l14.JPG",
+      "/gallery/l15.JPG",
     ],
   },
   {
-    id: "balcony-beautification",
-    title: "Balcony Beautification",
+    id: "terrace-and-balcony-gardening",
+    title: "Terrace and Balcony Gardening",
     description: "Maximize small spaces with stunning balcony gardens",
     images: [
-      "/gallery/b1.JPG",
-      "/gallery/b2.JPG",
-      "/gallery/b3.JPG",
-      "/gallery/b4.JPG",
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
     ],
   },
   {
-    id: "indoor-plantation",
-    title: "Indoor Plantation",
+    id: "vertical-garden",
+    title: "Vertical Garden",
     description:
       "Bring nature indoors with carefully curated plant collections",
     images: [
-      "/gallery/i1.JPG",
-      "/gallery/i2.JPG",
-      "/gallery/i3.JPG",
-      "/gallery/i4.JPG",
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
+    ],
+  },
+  {
+    id: "home-and-office-indoor-plantation",
+    title: "Home and Office Indoor Plantation",
+    description:
+      "Enhance your interiors with lush indoor plants for homes and offices",
+    images: [
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
+    ],
+  },
+  {
+    id: "garden-styling",
+    title: "Garden Styling",
+    description:
+      "Create beautiful and well-coordinated garden aesthetics with expert styling",
+    images: [
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
+    ],
+  },
+  {
+    id: "garden-execution",
+    title: "Garden Execution",
+    description: "Get complete garden setup and execution by professionals",
+    images: [
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
+    ],
+  },
+  {
+    id: "garden-maintenance",
+    title: "Garden Maintenance",
+    description: "Keep your garden thriving with regular maintenance and care",
+    images: [
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
+    ],
+  },
+  {
+    id: "visits-and-consultancy",
+    title: "Visits and Consultancy",
+    description:
+      "Get expert advice and on-site visits for all your garden needs",
+    images: [
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
+    ],
+  },
+  {
+    id: "plant-gifting",
+    title: "Plant Gifting",
+    description:
+      "Surprise your loved ones with beautiful and thoughtful plant gifts",
+    images: [
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
+    ],
+  },
+  {
+    id: "plant-home-delivery",
+    title: "Plant Home Delivery",
+    description: "Get plants delivered straight to your doorstep with ease",
+    images: [
+      "/gallery/l1.JPG",
+      "/gallery/l2.JPG",
+      "/gallery/l3.JPG",
+      "/gallery/l4.JPG",
     ],
   },
 ];
+
 export default function GalleryPage() {
   const [activeSection, setActiveSection] = useState("landscaping");
   const [visibleSections, setVisibleSections] = useState<Set<string>>(
     new Set()
   );
+  const setSectionRef = (id: string) => (el: HTMLElement | null) => {
+  sectionRefs.current[id] = el;
+};
+
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
   useEffect(() => {
@@ -59,10 +159,7 @@ export default function GalleryPage() {
           }
         });
       },
-      {
-        threshold: 0.3,
-        rootMargin: "-20% 0px -20% 0px",
-      }
+      { threshold: 0.3, rootMargin: "-20% 0px -20% 0px" }
     );
 
     Object.values(sectionRefs.current).forEach((ref) => {
@@ -81,13 +178,14 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* HEADER */}
       <header className="sticky top-0 z-50 bg-[rgba(245,232,208,0.85)] backdrop-blur-md border-b border-border shadow-md transition-all">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/">
               <div className="flex items-center space-x-2 cursor-pointer">
                 <Image
-                  src="/gallery/logo.png" // Replace with your actual logo path
+                  src="/gallery/logo.png"
                   alt="Rukhada Logo"
                   width={40}
                   height={40}
@@ -97,6 +195,7 @@ export default function GalleryPage() {
               </div>
             </Link>
 
+            {/* Desktop Nav */}
             <nav className="hidden md:flex space-x-1">
               {categories.map((category) => (
                 <button
@@ -113,7 +212,9 @@ export default function GalleryPage() {
               ))}
             </nav>
           </div>
-          <nav className="md:hidden mt-4 flex overflow-x-auto space-x-2 pb-2">
+
+          {/* Mobile Nav */}
+          <nav className="galNav md:hidden mt-4 flex overflow-x-auto space-x-2 pb-2">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -131,6 +232,7 @@ export default function GalleryPage() {
         </div>
       </header>
 
+      {/* HERO */}
       <section className="py-16 px-4 bg-background text-foreground">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-primary mb-6">
@@ -139,19 +241,20 @@ export default function GalleryPage() {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Explore our diverse portfolio of landscaping projects, from intimate
             balcony gardens to expansive outdoor landscapes. Each project
-            reflects our commitment to bringing natures beauty into every space.
+            reflects our commitment to bringing nature's beauty into every
+            space.
           </p>
         </div>
       </section>
 
+      {/* MAIN CONTENT */}
       <main className="pb-16">
         {categories.map((category) => (
           <section
             key={category.id}
             id={category.id}
-            ref={(el) => {
-              sectionRefs.current[category.id] = el;
-            }}
+            // ref={(el) => (sectionRefs.current[category.id] = el)}
+            ref={setSectionRef(category.id)}
             className="scroll-mt-24"
           >
             <div className="container mx-auto">
@@ -168,24 +271,20 @@ export default function GalleryPage() {
                   {category.description}
                 </p>
               </div>
-              <div
-                className={`grid gap-6 ${
-                  category.images.length === 4
-                    ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
-                    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-                }`}
-              >
+
+              {/* HORIZONTAL SCROLL SLIDER */}
+              <div className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4">
                 {category.images.map((image, index) => (
                   <div
                     key={index}
-                    className={`group relative overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 ${
+                    className={`group relative w-80 flex-shrink-0 snap-start overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 ${
                       visibleSections.has(category.id)
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-4"
                     }`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
-                    <div className="aspect-[4/3] relative">
+                    <div className="relative w-full h-56">
                       <Image
                         src={image || "/placeholder.svg"}
                         alt={`${category.title} project ${index + 1}`}
@@ -201,9 +300,10 @@ export default function GalleryPage() {
                         <h4 className="font-semibold text-lg mb-1">
                           {category.title} Project {index + 1}
                         </h4>
-                        <p className="text-sm text-muted-foreground"
-                        style={{ color: "#D9C1A2" }}
-                         >
+                        <p
+                          className="text-sm text-muted-foreground"
+                          style={{ color: "#D9C1A2" }}
+                        >
                           Professional {category.title.toLowerCase()} design and
                           execution
                         </p>
@@ -217,6 +317,7 @@ export default function GalleryPage() {
         ))}
       </main>
 
+      {/* CTA */}
       <section className="py-16 px-4 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center">
           <h3 className="text-3xl font-bold mb-4">

@@ -90,9 +90,7 @@ const ReviewsSection = () => {
             </h3>
 
             <div className="flex items-center justify-center mb-8">
-              <div className="w-12 h-1 bg-primary rounded-full"></div>
-              <div className="w-3 h-3 bg-accent rounded-full mx-4"></div>
-              <div className="w-12 h-1 bg-primary rounded-full"></div>
+              <div className="w-24 h-1 bg-primary rounded-full"></div>
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Do not just take our word for it. Hear from our satisfied
@@ -152,11 +150,11 @@ const ReviewsSection = () => {
                     <div className="relative z-10 border-t border-border/30 pt-6">
                       <div className="flex items-center space-x-4">
                         <div className="relative">
-                          <Image
+                          {/* <Image
                             src={review.avatar || "/placeholder.svg"}
                             alt={review.name}
                             className="w-14 h-14 rounded-full object-cover border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-300"
-                          />
+                          /> */}
                           <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-card"></div>
                         </div>
                         <div className="flex-1">
