@@ -22,8 +22,6 @@ const categories = [
       "/gallery/l8.JPG",
       "/gallery/l9.JPG",
       "/gallery/l10.JPG",
-
-      
       "/gallery/l11.JPG",
       "/gallery/l12.JPG",
       "/gallery/l13.JPG",
