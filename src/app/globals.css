@@ -446,7 +446,7 @@ nav {
   nav {
     transition: none;
     background: #b79360;
-    /* box-shadow: none !important; */
+    box-shadow: none !important;
     border-bottom: none !important;
     /* backdrop-filter: none !important; */
   }
@@ -473,7 +473,8 @@ nav {
   }
 
   .navbtn {
-    background: #f5e8d0 !important;
+    background: #8a6f47 !important;
+    color: #d9c1a2 !important;
     width: fit-content;
   }
 
@@ -498,5 +499,9 @@ nav {
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .galText{
+    color: #f5e8d0;
   }
 }

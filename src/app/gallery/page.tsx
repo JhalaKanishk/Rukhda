@@ -34,22 +34,26 @@ const categories = [
     title: "Terrace and Balcony Gardening",
     description: "Maximize small spaces with stunning balcony gardens",
     images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
-    ],
-  },
-  {
-    id: "vertical-garden",
-    title: "Vertical Garden",
-    description:
-      "Bring nature indoors with carefully curated plant collections",
-    images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
+      "/gallery/tb1.JPG",
+      "/gallery/tb2.JPG",
+      "/gallery/tb3.JPG",
+      "/gallery/tb4.JPG",
+      "/gallery/tb5.JPG",
+      "/gallery/tb6.JPG",
+      "/gallery/tb7.JPG",
+      "/gallery/tb8.JPG",
+      "/gallery/tb9.JPG",
+      "/gallery/tb10.JPG",
+      "/gallery/tb11.JPG",
+      "/gallery/tb12.JPG",
+      "/gallery/tb13.JPG",
+      "/gallery/tb14.JPG",
+      "/gallery/tb15.JPG",
+      "/gallery/tb16.JPG",
+      "/gallery/tb17.JPG",
+      "/gallery/tb18.JPG",
+      "/gallery/tb19.JPG",
+      "/gallery/tb20.JPG",
     ],
   },
   {
@@ -58,81 +62,131 @@ const categories = [
     description:
       "Enhance your interiors with lush indoor plants for homes and offices",
     images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
+      "/gallery/HO1.JPG",
+      "/gallery/HO2.JPG",
+      "/gallery/HO3.JPG",
+      "/gallery/HO4.JPG",
+      "/gallery/HO5.JPG",
+      "/gallery/HO6.JPG",
+      "/gallery/HO7.JPG",
+      "/gallery/HO8.JPG",
+      "/gallery/HO9.JPG",
+      "/gallery/HO10.JPG",
+      "/gallery/HO12.JPG",
+      "/gallery/HO13.JPG",
+      "/gallery/HO14.JPG",
+      "/gallery/HO15.JPG",
+      "/gallery/HO16.JPG",
+      "/gallery/HO17.JPG",
+      "/gallery/HO18.JPG",
+      "/gallery/HO19.JPG",
+      "/gallery/HO20.JPG",
+      "/gallery/HO21.JPG",
+      "/gallery/HO22.JPG",
+      "/gallery/HO23.JPG",
+      "/gallery/HO24.JPG",
+      "/gallery/HO25.JPG",
+      "/gallery/HO26.JPG",
+      "/gallery/HO27.JPG",
+      "/gallery/HO28.JPG",
+      "/gallery/HO29.JPG",
+      "/gallery/HO30.JPG",
+      "/gallery/HO31.JPG",
+      "/gallery/HO32.JPG",
+      "/gallery/HO33.JPG",
+      "/gallery/HO34.JPG",
+      "/gallery/HO35.JPG",
     ],
   },
   {
-    id: "garden-styling",
-    title: "Garden Styling",
+    id: "vertical-garden",
+    title: "Vertical Garden",
     description:
-      "Create beautiful and well-coordinated garden aesthetics with expert styling",
+      "Bring nature indoors with carefully curated plant collections",
     images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
+      "/gallery/V1.JPG",
+      "/gallery/V2.JPG",
+      "/gallery/V3.JPG",
+      "/gallery/V4.JPG",
+      "/gallery/V5.JPG",
+      "/gallery/V6.JPG",
+      "/gallery/V7.JPG",
+      "/gallery/V8.JPG",
+      "/gallery/V9.JPG",
+      "/gallery/V10.JPG",
+      "/gallery/V11.JPG",
+      "/gallery/V12.JPG",
     ],
   },
-  {
-    id: "garden-execution",
-    title: "Garden Execution",
-    description: "Get complete garden setup and execution by professionals",
-    images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
-    ],
-  },
-  {
-    id: "garden-maintenance",
-    title: "Garden Maintenance",
-    description: "Keep your garden thriving with regular maintenance and care",
-    images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
-    ],
-  },
-  {
-    id: "visits-and-consultancy",
-    title: "Visits and Consultancy",
-    description:
-      "Get expert advice and on-site visits for all your garden needs",
-    images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
-    ],
-  },
-  {
-    id: "plant-gifting",
-    title: "Plant Gifting",
-    description:
-      "Surprise your loved ones with beautiful and thoughtful plant gifts",
-    images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
-    ],
-  },
-  {
-    id: "plant-home-delivery",
-    title: "Plant Home Delivery",
-    description: "Get plants delivered straight to your doorstep with ease",
-    images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
-    ],
-  },
+  // {
+  //   id: "garden-styling",
+  //   title: "Garden Styling",
+  //   description:
+  //     "Create beautiful and well-coordinated garden aesthetics with expert styling",
+  //   images: [
+  //     "/gallery/l1.JPG",
+  //     "/gallery/l2.JPG",
+  //     "/gallery/l3.JPG",
+  //     "/gallery/l4.JPG",
+  //   ],
+  // },
+  // {
+  //   id: "garden-execution",
+  //   title: "Garden Execution",
+  //   description: "Get complete garden setup and execution by professionals",
+  //   images: [
+  //     "/gallery/l1.JPG",
+  //     "/gallery/l2.JPG",
+  //     "/gallery/l3.JPG",
+  //     "/gallery/l4.JPG",
+  //   ],
+  // },
+  // {
+  //   id: "garden-maintenance",
+  //   title: "Garden Maintenance",
+  //   description: "Keep your garden thriving with regular maintenance and care",
+  //   images: [
+  //     "/gallery/l1.JPG",
+  //     "/gallery/l2.JPG",
+  //     "/gallery/l3.JPG",
+  //     "/gallery/l4.JPG",
+  //   ],
+  // },
+  // {
+  //   id: "visits-and-consultancy",
+  //   title: "Visits and Consultancy",
+  //   description:
+  //     "Get expert advice and on-site visits for all your garden needs",
+  //   images: [
+  //     "/gallery/l1.JPG",
+  //     "/gallery/l2.JPG",
+  //     "/gallery/l3.JPG",
+  //     "/gallery/l4.JPG",
+  //   ],
+  // },
+  // {
+  //   id: "plant-gifting",
+  //   title: "Plant Gifting",
+  //   description:
+  //     "Surprise your loved ones with beautiful and thoughtful plant gifts",
+  //   images: [
+  //     "/gallery/l1.JPG",
+  //     "/gallery/l2.JPG",
+  //     "/gallery/l3.JPG",
+  //     "/gallery/l4.JPG",
+  //   ],
+  // },
+  // {
+  //   id: "plant-home-delivery",
+  //   title: "Plant Home Delivery",
+  //   description: "Get plants delivered straight to your doorstep with ease",
+  //   images: [
+  //     "/gallery/l1.JPG",
+  //     "/gallery/l2.JPG",
+  //     "/gallery/l3.JPG",
+  //     "/gallery/l4.JPG",
+  //   ],
+  // },
 ];
 
 export default function GalleryPage() {
@@ -141,8 +195,8 @@ export default function GalleryPage() {
     new Set()
   );
   const setSectionRef = (id: string) => (el: HTMLElement | null) => {
-  sectionRefs.current[id] = el;
-};
+    sectionRefs.current[id] = el;
+  };
 
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
@@ -189,7 +243,7 @@ export default function GalleryPage() {
                   height={40}
                   className="h-10 w-10 object-contain border-2 border-primary rounded-full"
                 />
-                <span className="text-2xl font-bold text-primary">Rukhada</span>
+                <span className="text-2xl font-bold text-primary">RUKHADA</span>
               </div>
             </Link>
 
@@ -239,8 +293,7 @@ export default function GalleryPage() {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Explore our diverse portfolio of landscaping projects, from intimate
             balcony gardens to expansive outdoor landscapes. Each project
-            reflects our commitment to bringing natures beauty into every
-            space.
+            reflects our commitment to bringing natures beauty into every space.
           </p>
         </div>
       </section>
@@ -316,12 +369,12 @@ export default function GalleryPage() {
       </main>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-primary text-primary-foreground">
-        <div className="container mx-auto text-center">
+      <section className="py-16 px-4 bg-foreground text-background">
+        <div className="container mx-auto text-center  text-background">
           <h3 className="text-3xl font-bold mb-4">
             Ready to Transform Your Space?
           </h3>
-          <p className="text-xl mb-8 text-secondary-foreground">
+          <p className=" mb-8 galText ">
             Let us create something beautiful together. Contact us for a
             consultation.
           </p>

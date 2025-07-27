@@ -22,20 +22,25 @@ const Footer = () => {
     { name: "Contact", href: "#contact" },
   ];
 
-  const services = [
-    "Indoor Plant Care",
-    "Balcony Gardens",
-    "Office Gardens",
-    "Event Decoration",
-    "Plant Consultation",
-    "Emergency Care",
-  ];
+const services = [
+  "Landscaping",
+  "Terrace And Balcony Gardening",
+  "Vertical Garden",
+  "Home And Office Indoor Plantation",
+  "Garden Styling",
+  "Garden Execution",
+  "Garden Maintenance",
+  "Visits And Consultancy",
+  "Plant Gifting",
+  "Plant Home Delivery"
+];
+
 
   const socialLinks = [
     {
       icon: Instagram,
       name: "Instagram",
-      href: "https://instagram.com/Rukhada",
+      href: "https://www.instagram.com/rukhada_by_hng?igsh=Y3R4c3pxMWhpdTU5",
       color: "hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500",
       followers: "12.5K",
     },
@@ -49,7 +54,7 @@ const Footer = () => {
     {
       icon: MessageCircle,
       name: "WhatsApp",
-      href: "https://wa.me/1234567890",
+      href: "https://wa.me/8949040522",
       color: "hover:bg-green-500",
       followers: "24/7",
     },
@@ -103,8 +108,8 @@ const Footer = () => {
                 },
                 {
                   icon: Mail,
-                  text: "info@Rukhada.com",
-                  href: "mailto:info@rukhada.com",
+                  text: "rukhadabyhng10@gmail.com",
+                  href: "mailto:rukhadabyhng10@gmail.com",
                 },
                 {
                   icon: MapPin,

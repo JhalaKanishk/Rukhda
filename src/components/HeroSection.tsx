@@ -21,19 +21,19 @@ export default function HeroSection() {
   const socialLinks = [
     {
       icon: Instagram,
-      href: "https://instagram.com/rukhada",
+      href: "https://www.instagram.com/rukhada_by_hng?igsh=Y3R4c3pxMWhpdTU5",
       label: "Instagram",
       color: "hover:bg-pink-500 hover:text-white",
     },
     {
       icon: MessageCircle,
-      href: "https://wa.me/1234567890",
+      href: "https://wa.me/8949040522",
       label: "WhatsApp",
       color: "hover:bg-green-500 hover:text-white",
     },
     {
       icon: Mail,
-      href: "mailto:info@rukhada.com",
+      href: "mailto:rukhadabyhng10@gmail.com",
       label: "Email",
       color: "hover:bg-blue-500 hover:text-white",
     },

@@ -134,8 +134,20 @@ const Navigation = () => {
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-6 border-b border-primary/10">
             <div className="flex items-center space-x-2">
-              <Leaf className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold text-primary">Rukhada</span>
+              {/* <Leaf className="h-6 w-6 text-primary" /> */}
+              <Image
+                src="/gallery/logo.png" // Replace with your actual logo path
+                alt="Rukhada Logo"
+                width={200}
+                height={200}
+                className="h-8 w-8 img object-contain border-2 border-primary rounded-full"
+              />
+              <div className="flex flex-col conatineHead items-center">
+                <span className="text-2xl font-bold text-primary">RUKHADA</span>
+                <p className="text-sm tagline text-muted-foreground tracking-wide">
+                  ALL THINGS GROW WITH LOVE
+                </p>
+              </div>
             </div>
             <Button
               variant="ghost"
@@ -166,7 +178,9 @@ const Navigation = () => {
               <p className="text-sm text-brown-text mb-1">
                 📞 +1 (555) 123-PLANT
               </p>
-              <p className="text-sm text-brown-text">✉️ info@Rukhada.com</p>
+              <p className="text-sm text-brown-text">
+                ✉️ rukhadabyhng10@gmail.com
+              </p>
             </div>
           </div>
         </div>

@@ -58,8 +58,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@Rukhada.com", "support@Rukhada.com"],
-      link: "mailto:info@Rukhada.com",
+      details: ["rukhadabyhng10@gmail.com", "rukhadabyhng10@gmail.com"],
+      link: "mailto:rukhadabyhng10@gmail.com",
     },
     {
       icon: Clock,
