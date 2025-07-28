@@ -161,15 +161,25 @@ const Navigation = () => {
           {/* Sidebar Menu */}
           <div className="p-6">
             <nav className="space-y-4 navPhone">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="navbtn block w-full text-left py-3 px-4 rounded-lg text-foreground  font-medium"
-                >
-                  {item.name}
-                </button>
-              ))}
+              {navItems.map((item) =>
+                item.href.startsWith("#") ? (
+                  <button
+                    key={item.name}
+                    onClick={() => scrollToSection(item.href)}
+                    className="navbtn block w-full text-left py-3 px-4 rounded-lg text-foreground font-medium"
+                  >
+                    {item.name}
+                  </button>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="navbtn block w-full text-left py-3 px-4 rounded-lg text-foreground font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
             </nav>
 
             {/* Contact Info in Sidebar */}
