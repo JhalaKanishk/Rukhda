@@ -9,10 +9,10 @@ import {
   MapPin,
   ArrowRight,
 } from "lucide-react";
+import Image from "next/image";
 import type React from "react";
 
 const Footer = () => {
-
   const quickLinks = [
     { name: "Home", href: "#home" },
     { name: "About Us", href: "#about" },
@@ -22,19 +22,18 @@ const Footer = () => {
     { name: "Contact", href: "#contact" },
   ];
 
-const services = [
-  "Landscaping",
-  "Terrace And Balcony Gardening",
-  "Vertical Garden",
-  "Home And Office Indoor Plantation",
-  "Garden Styling",
-  "Garden Execution",
-  "Garden Maintenance",
-  "Visits And Consultancy",
-  "Plant Gifting",
-  "Plant Home Delivery"
-];
-
+  const services = [
+    "Landscaping",
+    "Terrace And Balcony Gardening",
+    "Vertical Garden",
+    "Home And Office Indoor Plantation",
+    "Garden Styling",
+    "Garden Execution",
+    "Garden Maintenance",
+    "Visits And Consultancy",
+    "Plant Gifting",
+    "Plant Home Delivery",
+  ];
 
   const socialLinks = [
     {
@@ -67,7 +66,6 @@ const services = [
     }
   };
 
-
   return (
     <footer className="relative bg-gradient-to-b from-background via-primary/5 to-primary/10 border-t border-primary/20 overflow-hidden">
       {/* Background decorations */}
@@ -84,12 +82,21 @@ const services = [
           <div className="space-y-6">
             <div className="group flex items-center space-x-3 cursor-pointer">
               <div className="relative">
-                <Leaf className="h-10 w-10 text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
+                <Image
+                  src="/gallery/logo.png" // Replace with your actual logo path
+                  alt="Rukhada Logo"
+                  width={200}
+                  height={200}
+                  className="h-8 w-8 img object-contain border-2 border-primary rounded-full"
+                />
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <span className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent group-hover:from-accent group-hover:to-primary transition-all duration-300">
-                Rukhada
-              </span>
+              <div className="flex flex-col conatineHead items-center">
+                <span className="text-2xl font-bold text-primary">RUKHADA</span>
+                <p className="text-sm tagline text-muted-foreground tracking-wide">
+                  ALL THINGS GROW WITH LOVE
+                </p>
+              </div>
             </div>
 
             <p className="text-muted-foreground leading-relaxed text-lg">
@@ -103,8 +110,8 @@ const services = [
               {[
                 {
                   icon: Phone,
-                  text: "+1 (555) 123-PLANT",
-                  href: "tel:+15551237526",
+                  text: "8949040522",
+                  href: "tel:+8949040522",
                 },
                 {
                   icon: Mail,

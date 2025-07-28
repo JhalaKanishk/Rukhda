@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Mail, Phone } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -185,11 +186,13 @@ const Navigation = () => {
             {/* Contact Info in Sidebar */}
             <div className="mt-8 p-4 bg-accent/20 rounded-lg border border-primary/10">
               <h4 className="font-bold text-primary mb-2">Quick Contact</h4>
-              <p className="text-sm text-brown-text mb-1">
-                📞 +1 (555) 123-PLANT
+              <p className="text-sm text-brown-text flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                +91-8949040522
               </p>
-              <p className="text-sm text-brown-text">
-                ✉️ rukhadabyhng10@gmail.com
+              <p className="text-sm text-brown-text flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                rukhadabyhng10@gmail.com
               </p>
             </div>
           </div>
@@ -198,6 +201,5 @@ const Navigation = () => {
     </>
   );
 };
-
 
 export default Navigation;
