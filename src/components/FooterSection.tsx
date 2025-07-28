@@ -1,6 +1,5 @@
 "use client";
 import {
-  Leaf,
   Instagram,
   Facebook,
   MessageCircle,
