@@ -12,21 +12,29 @@ const categories = [
     description:
       "Transform your outdoor spaces with professional landscape design",
     images: [
-      "/gallery/l1.JPG",
-      "/gallery/l2.JPG",
-      "/gallery/l3.JPG",
-      "/gallery/l4.JPG",
-      "/gallery/l5.JPG",
-      "/gallery/l6.JPG",
-      "/gallery/l7.JPG",
-      "/gallery/l8.JPG",
-      "/gallery/l9.JPG",
-      "/gallery/l10.JPG",
-      "/gallery/l11.JPG",
-      "/gallery/l12.JPG",
-      "/gallery/l13.JPG",
-      "/gallery/l14.JPG",
-      "/gallery/l15.JPG",
+      "/gallery/land1.JPEG",
+      "/gallery/land2.JPEG",
+      "/gallery/land3.JPEG",
+      "/gallery/land4.JPEG",
+      "/gallery/land5.JPEG",
+      "/gallery/land6.JPEG",
+      "/gallery/land7.JPEG",
+      "/gallery/land8.JPEG",
+      "/gallery/land9.JPEG",
+      "/gallery/land10.JPEG",
+      "/gallery/land11.JPEG",
+      "/gallery/land12.JPEG",
+      "/gallery/land13.JPEG",
+      "/gallery/land14.JPEG",
+      "/gallery/land15.JPEG",
+      "/gallery/land16.JPEG",
+      "/gallery/land17.JPEG",
+      "/gallery/land18.JPEG",
+      "/gallery/land19.JPEG",
+      "/gallery/land20.JPEG",
+      "/gallery/land21.JPEG",
+      "/gallery/land22.JPEG",
+      "/gallery/land23.JPEG",
     ],
   },
   {
@@ -34,12 +42,12 @@ const categories = [
     title: "Terrace and Balcony Gardening",
     description: "Maximize small spaces with stunning balcony gardens",
     images: [
-      "/gallery/tb1.JPG",
       "/gallery/tb2.JPG",
       "/gallery/tb3.JPG",
       "/gallery/tb4.JPG",
       "/gallery/tb5.JPG",
       "/gallery/tb6.JPG",
+      "/gallery/tb1.JPG",
       "/gallery/tb7.JPG",
       "/gallery/tb8.JPG",
       "/gallery/tb9.JPG",
@@ -197,6 +205,7 @@ export default function GalleryPage() {
   const setSectionRef = (id: string) => (el: HTMLElement | null) => {
     sectionRefs.current[id] = el;
   };
+  const [zoomImage, setZoomImage] = useState<string | null>(null);
 
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
@@ -335,7 +344,7 @@ export default function GalleryPage() {
                     }`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
-                    <div className="relative w-full h-56">
+                    <div className="relative w-full h-[22rem] sm:h-[26rem] md:h-[30rem] lg:h-[34rem]">
                       <Image
                         src={image || "/placeholder.svg"}
                         alt={`${category.title} project ${index + 1}`}
