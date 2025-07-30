@@ -205,7 +205,6 @@ export default function GalleryPage() {
   const setSectionRef = (id: string) => (el: HTMLElement | null) => {
     sectionRefs.current[id] = el;
   };
-  const [zoomImage, setZoomImage] = useState<string | null>(null);
 
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
 
