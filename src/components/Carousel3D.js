@@ -9,7 +9,6 @@ const items = [
   "/gallery/l2.JPG",
   "/gallery/l3.JPG",
   "/gallery/l4.JPG",
-  "/gallery/l5.JPG",
   "/gallery/l6.JPG",
   "/gallery/l7.JPG",
   "/gallery/l8.JPG",
