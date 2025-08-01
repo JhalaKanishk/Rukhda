@@ -14,6 +14,7 @@ const items = [
   "/gallery/l8.JPG",
   "/gallery/l9.JPG",
   "/gallery/l10.JPG",
+  
 ];
 
 export default function Carousel3D() {
