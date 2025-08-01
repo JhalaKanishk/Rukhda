@@ -69,7 +69,6 @@ const categories = [
       "/gallery/HO6.JPG",
       "/gallery/HO7.JPG",
       "/gallery/HO8.JPG",
-      "/gallery/HO9.JPG",
       "/gallery/HO10.JPG",
       "/gallery/HO11.JPG",
       "/gallery/HO12.JPG",
