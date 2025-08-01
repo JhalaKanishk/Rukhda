@@ -44,6 +44,15 @@ const categories = [
     images: [
       "/gallery/T1.JPG",
       "/gallery/T2.JPG",
+      "/gallery/T3.JPG",
+      "/gallery/T4.JPG",
+      "/gallery/T5.JPG",
+      "/gallery/T6.JPG",
+      "/gallery/T7.JPG",
+      "/gallery/T8.JPG",
+      "/gallery/T9.JPG",
+      "/gallery/T10.JPG",
+      "/gallery/T11.JPG",
     ],
   },
   {
