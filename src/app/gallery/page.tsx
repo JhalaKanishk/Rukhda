@@ -14,7 +14,6 @@ const categories = [
       "Transform your outdoor spaces with professional landscape design",
     images: [
       "/gallery/TB1.JPG",
-scrollX
     ],
   },
   {
