@@ -73,10 +73,12 @@ const categories = [
     id: "terrace-and-balcony-gardening",
     title: "Terrace and Balcony Gardening",
     description: "Maximize small spaces with stunning balcony gardens",
-    images: [
+     images: [
       "/gallery/TB1.JPG",
       "/gallery/HO2.JPG",
-
+      "/gallery/TB3.JPG",
+      "/gallery/HO4.JPG",
+      "/gallery/HO20.JPG",
     ],
   },
   {
