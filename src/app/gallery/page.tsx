@@ -73,7 +73,11 @@ const categories = [
     id: "terrace-and-balcony-gardening",
     title: "Terrace and Balcony Gardening",
     description: "Maximize small spaces with stunning balcony gardens",
-    images: ["/gallery/TB1.JPG", "/gallery/TB2.JPG"],
+    images: [
+      "/gallery/TB1.JPG",
+      "/gallery/HO2.JPG",
+
+    ],
   },
   {
     id: "home-and-office-indoor-plantation",
