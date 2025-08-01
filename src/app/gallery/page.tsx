@@ -5,65 +5,7 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-
 const categories = [
-  {
-    id: "landscaping",
-    title: "Landscaping",
-    description:
-      "Transform your outdoor spaces with professional landscape design",
-    images: [
-       "/gallery/HO1.JPG",
-      "/gallery/HO2.JPG",
-      "/gallery/HO3.JPG",
-      "/gallery/HO4.JPG",
-      "/gallery/HO5.JPG",
-      "/gallery/HO6.JPG",
-      "/gallery/HO7.JPG",
-    ],
-  },
-  {
-    id: "terrace-and-balcony-gardening",
-    title: "Terrace and Balcony Gardening",
-    description: "Maximize small spaces with stunning balcony gardens",
-    images: [
-       "/gallery/HO1.JPG",
-      "/gallery/HO2.JPG",
-      "/gallery/HO3.JPG",
-      "/gallery/HO4.JPG",
-      "/gallery/HO5.JPG",
-      "/gallery/HO6.JPG",
-      "/gallery/HO7.JPG",
-    ],
-  },
-  {
-    id: "home-and-office-indoor-plantation",
-    title: "Home and Office Indoor Plantation",
-    description:
-      "Enhance your interiors with lush indoor plants for homes and offices",
-    images: [
-      "/gallery/HO1.JPG",
-      "/gallery/HO2.JPG",
-      "/gallery/HO3.JPG",
-      "/gallery/HO4.JPG",
-      "/gallery/HO5.JPG",
-      "/gallery/HO6.JPG",
-      "/gallery/HO7.JPG",
-      "/gallery/HO8.JPG",
-      "/gallery/HO9.JPG",
-      "/gallery/HO10.JPG",
-      "/gallery/HO11.JPG",
-      "/gallery/HO12.JPG",
-      "/gallery/HO13.JPG",
-      "/gallery/HO14.JPG",
-      "/gallery/HO15.JPG",
-      "/gallery/HO16.JPG",
-      "/gallery/HO17.JPG",
-      "/gallery/HO18.JPG",
-      "/gallery/HO19.JPG",
-      "/gallery/HO20.JPG",
-    ],
-  },
   {
     id: "vertical-garden",
     title: "Vertical Garden",
@@ -96,6 +38,54 @@ const categories = [
       "/gallery/VG24.JPG",
     ],
   },
+  {
+    id: "landscaping",
+    title: "Landscaping",
+    description:
+      "Transform your outdoor spaces with professional landscape design",
+    images: [
+      "/gallery/LS1.jpeg",
+      "/gallery/LS2.jpeg",
+    ],
+  },
+  {
+    id: "terrace-and-balcony-gardening",
+    title: "Terrace and Balcony Gardening",
+    description: "Maximize small spaces with stunning balcony gardens",
+    images: [
+      "/gallery/TB1.JPG",
+      "/gallery/TB2.JPG",
+    ],
+  },
+  {
+    id: "home-and-office-indoor-plantation",
+    title: "Home and Office Indoor Plantation",
+    description:
+      "Enhance your interiors with lush indoor plants for homes and offices",
+    images: [
+      "/gallery/HO1.JPG",
+      "/gallery/HO2.JPG",
+      "/gallery/HO3.JPG",
+      "/gallery/HO4.JPG",
+      "/gallery/HO5.JPG",
+      "/gallery/HO6.JPG",
+      "/gallery/HO7.JPG",
+      "/gallery/HO8.JPG",
+      "/gallery/HO9.JPG",
+      "/gallery/HO10.JPG",
+      "/gallery/HO11.JPG",
+      "/gallery/HO12.JPG",
+      "/gallery/HO13.JPG",
+      "/gallery/HO14.JPG",
+      "/gallery/HO15.JPG",
+      "/gallery/HO16.JPG",
+      "/gallery/HO17.JPG",
+      "/gallery/HO18.JPG",
+      "/gallery/HO19.JPG",
+      "/gallery/HO20.JPG",
+    ],
+  },
+
   // {
   //   id: "garden-styling",
   //   title: "Garden Styling",
