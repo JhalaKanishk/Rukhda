@@ -12,29 +12,29 @@ const categories = [
     description:
       "Transform your outdoor spaces with professional landscape design",
     images: [
-      "/gallery/land1.JPEG",
-      "/gallery/land2.JPEG",
-      "/gallery/land3.JPEG",
-      "/gallery/land4.JPEG",
-      "/gallery/land5.JPEG",
-      "/gallery/land6.JPEG",
-      "/gallery/land7.JPEG",
-      "/gallery/land8.JPEG",
-      "/gallery/land9.JPEG",
-      "/gallery/land10.JPEG",
-      "/gallery/land11.JPEG",
-      "/gallery/land12.JPEG",
-      "/gallery/land13.JPEG",
-      "/gallery/land14.JPEG",
-      "/gallery/land15.JPEG",
-      "/gallery/land16.JPEG",
-      "/gallery/land17.JPEG",
-      "/gallery/land18.JPEG",
-      "/gallery/land19.JPEG",
-      "/gallery/land20.JPEG",
-      "/gallery/land21.JPEG",
-      "/gallery/land22.JPEG",
-      "/gallery/land23.JPEG",
+      "/gallery/LS1.JPEG",
+      "/gallery/LS2.JPEG",
+      "/gallery/LS3.JPEG",
+      "/gallery/LS4.JPEG",
+      "/gallery/LS5.JPEG",
+      "/gallery/LS6.JPEG",
+      "/gallery/LS7.JPEG",
+      "/gallery/LS8.JPEG",
+      "/gallery/LS9.JPEG",
+      "/gallery/LS10.JPEG",
+      "/gallery/LS11.JPEG",
+      "/gallery/LS12.JPEG",
+      "/gallery/LS13.JPEG",
+      "/gallery/LS14.JPEG",
+      "/gallery/LS15.JPEG",
+      "/gallery/LS16.JPEG",
+      "/gallery/LS17.JPEG",
+      "/gallery/LS18.JPEG",
+      "/gallery/LS19.JPEG",
+      "/gallery/LS20.JPEG",
+      "/gallery/LS21.JPEG",
+      "/gallery/LS22.JPEG",
+      "/gallery/LS23.JPEG",
     ],
   },
   {
@@ -71,13 +71,16 @@ const categories = [
       "/gallery/HO8.JPG",
       "/gallery/HO9.JPG",
       "/gallery/HO10.JPG",
-      "/gallery/H011.JPG",
+      "/gallery/HO11.JPG",
       "/gallery/HO12.JPG",
       "/gallery/HO13.JPG",
       "/gallery/HO14.JPG",
       "/gallery/HO15.JPG",
       "/gallery/HO16.JPG",
       "/gallery/HO17.JPG",
+      "/gallery/HO18.JPG",
+      "/gallery/HO19.JPG",
+      "/gallery/HO20.JPG",
     ],
   },
   {
@@ -86,18 +89,30 @@ const categories = [
     description:
       "Bring nature indoors with carefully curated plant collections",
     images: [
-      "/gallery/V1.JPG",
-      "/gallery/V2.JPG",
-      "/gallery/V3.JPG",
-      "/gallery/V4.JPG",
-      "/gallery/V5.JPG",
-      "/gallery/V6.JPG",
-      "/gallery/V7.JPG",
-      "/gallery/V8.JPG",
-      "/gallery/V9.JPG",
-      "/gallery/V10.JPG",
-      "/gallery/V11.JPG",
-      "/gallery/V12.JPG",
+      "/gallery/VG1.JPG",
+      "/gallery/VG2.JPG",
+      "/gallery/VG3.JPG",
+      "/gallery/VG4.JPG",
+      "/gallery/VG5.JPG",
+      "/gallery/VG6.JPG",
+      "/gallery/VG7.JPG",
+      "/gallery/VG8.JPG",
+      "/gallery/VG9.JPG",
+      "/gallery/VG10.JPG",
+      "/gallery/VG11.JPG",
+      "/gallery/VG12.JPG",
+      "/gallery/VG13.JPG",
+      "/gallery/VG14.JPG",
+      "/gallery/VG15.JPG",
+      "/gallery/VG16.JPG",
+      "/gallery/VG17.JPG",
+      "/gallery/VG18.JPG",
+      "/gallery/VG19.JPG",
+      "/gallery/VG20.JPG",
+      "/gallery/VG21.JPG",
+      "/gallery/VG22.JPG",
+      "/gallery/VG23.JPG",
+      "/gallery/VG24.JPG",
     ],
   },
   // {
@@ -320,7 +335,7 @@ export default function GalleryPage() {
                     <div className="relative w-full h-[22rem] sm:h-[26rem] md:h-[30rem] lg:h-[34rem]">
                       <Image
                         src={image || "/placeholder.svg"}
-                        alt={`${category.title} project ${index + 1}`}
+                        alt={`${category.title}`}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -331,7 +346,7 @@ export default function GalleryPage() {
                         style={{ color: "#F5E8D0" }}
                       >
                         <h4 className="font-semibold text-lg mb-1">
-                          {category.title} Project {index + 1}
+                          {category.title}
                         </h4>
                         <p
                           className="text-sm text-muted-foreground"
