@@ -23,6 +23,7 @@ const Navigation = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     // { name: "Plans", href: "#plans" },
+    { name: "Services", href: "#service" },
     { name: "Gallery", href: "/gallery" },
     { name: "Reviews", href: "#reviews" },
     { name: "Contact", href: "#contact" },
@@ -190,6 +191,11 @@ const Navigation = () => {
                 <Phone className="w-4 h-4" />
                 +91-8949040522
               </p>
+              <p className="text-sm text-brown-text flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                +91-6375695585
+              </p>
+              <br />
               <p className="text-sm text-brown-text flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 rukhadabyhng10@gmail.com

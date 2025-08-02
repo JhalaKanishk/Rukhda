@@ -39,7 +39,7 @@ export default function HeroSection() {
     },
     {
       icon: Phone,
-      href: "tel:+1234567890",
+      href: "tel:+",
       label: "Phone",
       color: "hover:bg-primary hover:text-primary-foreground",
     },

@@ -154,7 +154,7 @@ const AboutSection = () => {
           </Card>
 
           {/* Services Section */}
-          <div className="mt-16 text-center">
+          <div className="mt-16 text-center" id="service">
             <div className="mb-12">
               <h3 className="text-4xl font-bold text-primary mb-4">
                 Our Services
@@ -412,9 +412,7 @@ const AboutSection = () => {
                 Let us discuss your vision and create a personalized plan that
                 brings your dream garden to life.
               </p>
-              <button className="bg-background text-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl">
-                Get Free Consultation
-              </button>
+              
             </div>
           </div>
 

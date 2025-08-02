@@ -45,7 +45,7 @@ const Footer = () => {
     {
       icon: Facebook,
       name: "Facebook",
-      href: "https://facebook.com/Rukhada",
+      href: "https://www.facebook.com/share/19VpsfZxVs/?mibextid=wwXIfr",
       color: "hover:bg-blue-600",
       followers: "8.2K",
     },
@@ -109,7 +109,7 @@ const Footer = () => {
               {[
                 {
                   icon: Phone,
-                  text: "8949040522",
+                  text: "8949040522, 6375695585",
                   href: "tel:+8949040522",
                 },
                 {
@@ -117,11 +117,11 @@ const Footer = () => {
                   text: "rukhadabyhng10@gmail.com",
                   href: "mailto:rukhadabyhng10@gmail.com",
                 },
-                {
-                  icon: MapPin,
-                  text: "123 Green Valley Road, Plant District",
-                  href: "#",
-                },
+                // {
+                //   icon: MapPin,
+                //   text: "123 Green Valley Road, Plant District",
+                //   href: "#",
+                // },
               ].map((contact, index) => (
                 <a
                   key={index}

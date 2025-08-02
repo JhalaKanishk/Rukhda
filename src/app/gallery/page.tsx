@@ -53,14 +53,6 @@ const categories = [
       "/gallery/T9.JPG",
       "/gallery/T10.JPG",
       "/gallery/T11.JPG",
-    ],
-  },
-  {
-    id: "home-and-office-indoor-plantation",
-    title: "Home and Office Indoor Plantation",
-    description:
-      "Enhance your interiors with lush indoor plants for homes and offices",
-    images: [
       "/gallery/HO1.JPG",
       "/gallery/HO2.JPG",
       "/gallery/HO3.JPG",
@@ -70,7 +62,14 @@ const categories = [
       "/gallery/HO7.JPG",
       "/gallery/HO8.JPG",
       "/gallery/HO10.JPG",
-      "/gallery/HO11.JPG",
+    ],
+  },
+  {
+    id: "home-and-office-indoor-plantation",
+    title: "Home and Office Indoor Plantation",
+    description:
+      "Enhance your interiors with lush indoor plants for homes and offices",
+    images: [
       "/gallery/HO12.JPG",
       "/gallery/HO13.JPG",
       "/gallery/HO14.JPG",
@@ -80,6 +79,11 @@ const categories = [
       "/gallery/HO18.JPG",
       "/gallery/HO19.JPG",
       "/gallery/HO20.JPG",
+       "/gallery/VG8.JPG",
+      "/gallery/VG9.JPG",
+      "/gallery/VG10.JPG",
+      "/gallery/VG11.JPG",
+      "/gallery/VG12.JPG",
     ],
   },
   {
@@ -95,18 +99,7 @@ const categories = [
       "/gallery/VG5.JPG",
       "/gallery/VG6.JPG",
       "/gallery/VG7.JPG",
-      "/gallery/VG8.JPG",
-      "/gallery/VG9.JPG",
-      "/gallery/VG10.JPG",
-      "/gallery/VG11.JPG",
-      "/gallery/VG12.JPG",
-      "/gallery/VG13.JPG",
-      "/gallery/VG14.JPG",
-      "/gallery/VG15.JPG",
-      "/gallery/VG16.JPG",
-      "/gallery/VG17.JPG",
-      "/gallery/VG18.JPG",
-      "/gallery/VG19.JPG",
+     
       "/gallery/VG20.JPG",
       "/gallery/VG21.JPG",
       "/gallery/VG22.JPG",
