@@ -5,7 +5,6 @@ import {
   MessageCircle,
   Mail,
   Phone,
-  MapPin,
   ArrowRight,
 } from "lucide-react";
 import Image from "next/image";
