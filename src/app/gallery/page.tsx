@@ -79,11 +79,6 @@ const categories = [
       "/gallery/HO18.JPG",
       "/gallery/HO19.JPG",
       "/gallery/HO20.JPG",
-       "/gallery/VG8.JPG",
-      "/gallery/VG9.JPG",
-      "/gallery/VG10.JPG",
-      "/gallery/VG11.JPG",
-      "/gallery/VG12.JPG",
     ],
   },
   {
@@ -99,7 +94,10 @@ const categories = [
       "/gallery/VG5.JPG",
       "/gallery/VG6.JPG",
       "/gallery/VG7.JPG",
-     
+      "/gallery/VG8.JPG",
+      "/gallery/VG10.JPG",
+      "/gallery/VG11.JPG",
+      "/gallery/VG12.JPG",
       "/gallery/VG20.JPG",
       "/gallery/VG21.JPG",
       "/gallery/VG22.JPG",
