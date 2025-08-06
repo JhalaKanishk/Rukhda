@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-const categories = [
+export const categories = [
   {
     id: "landscaping",
     title: "Landscaping",
@@ -71,15 +71,7 @@ const categories = [
     description:
       "Enhance your interiors with lush indoor plants for homes and offices",
     images: [
-      "/gallery/HO12.JPG",
-      "/gallery/HO13.JPG",
-      "/gallery/HO14.JPG",
-      "/gallery/HO15.JPG",
-      "/gallery/HO16.JPG",
-      "/gallery/HO17.JPG",
-      "/gallery/HO18.JPG",
-      "/gallery/HO19.JPG",
-      "/gallery/HO20.JPG",
+      "/gallery/HO1.JPG",
     ],
   },
   {
@@ -96,86 +88,14 @@ const categories = [
       "/gallery/VG6.JPG",
       "/gallery/VG7.JPG",
       "/gallery/VG8.JPG",
+      "/gallery/VG9.JPG",
       "/gallery/VG10.JPG",
       "/gallery/VG11.JPG",
       "/gallery/VG12.JPG",
-      "/gallery/VG20.JPG",
-      "/gallery/VG21.JPG",
-      "/gallery/VG22.JPG",
-      "/gallery/VG23.JPG",
-      "/gallery/VG24.JPG",
     ],
   },
-  // {
-  //   id: "garden-styling",
-  //   title: "Garden Styling",
-  //   description:
-  //     "Create beautiful and well-coordinated garden aesthetics with expert styling",
-  //   images: [
-  //     "/gallery/l1.JPG",
-  //     "/gallery/l2.JPG",
-  //     "/gallery/l3.JPG",
-  //     "/gallery/l4.JPG",
-  //   ],
-  // },
-  // {
-  //   id: "garden-execution",
-  //   title: "Garden Execution",
-  //   description: "Get complete garden setup and execution by professionals",
-  //   images: [
-  //     "/gallery/l1.JPG",
-  //     "/gallery/l2.JPG",
-  //     "/gallery/l3.JPG",
-  //     "/gallery/l4.JPG",
-  //   ],
-  // },
-  // {
-  //   id: "garden-maintenance",
-  //   title: "Garden Maintenance",
-  //   description: "Keep your garden thriving with regular maintenance and care",
-  //   images: [
-  //     "/gallery/l1.JPG",
-  //     "/gallery/l2.JPG",
-  //     "/gallery/l3.JPG",
-  //     "/gallery/l4.JPG",
-  //   ],
-  // },
-  // {
-  //   id: "visits-and-consultancy",
-  //   title: "Visits and Consultancy",
-  //   description:
-  //     "Get expert advice and on-site visits for all your garden needs",
-  //   images: [
-  //     "/gallery/l1.JPG",
-  //     "/gallery/l2.JPG",
-  //     "/gallery/l3.JPG",
-  //     "/gallery/l4.JPG",
-  //   ],
-  // },
-  // {
-  //   id: "plant-gifting",
-  //   title: "Plant Gifting",
-  //   description:
-  //     "Surprise your loved ones with beautiful and thoughtful plant gifts",
-  //   images: [
-  //     "/gallery/l1.JPG",
-  //     "/gallery/l2.JPG",
-  //     "/gallery/l3.JPG",
-  //     "/gallery/l4.JPG",
-  //   ],
-  // },
-  // {
-  //   id: "plant-home-delivery",
-  //   title: "Plant Home Delivery",
-  //   description: "Get plants delivered straight to your doorstep with ease",
-  //   images: [
-  //     "/gallery/l1.JPG",
-  //     "/gallery/l2.JPG",
-  //     "/gallery/l3.JPG",
-  //     "/gallery/l4.JPG",
-  //   ],
-  // },
 ];
+
 
 export default function GalleryPage() {
   const [activeSection, setActiveSection] = useState("landscaping");
