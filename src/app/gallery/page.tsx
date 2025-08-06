@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
-export const categories = [
+const categories = [
   {
     id: "landscaping",
     title: "Landscaping",
@@ -122,9 +122,6 @@ export const categories = [
     ],
   },
 ];
-
-
-
 
 export default function GalleryPage() {
   const [activeSection, setActiveSection] = useState("landscaping");
