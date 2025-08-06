@@ -124,6 +124,8 @@ export const categories = [
 ];
 
 
+
+
 export default function GalleryPage() {
   const [activeSection, setActiveSection] = useState("landscaping");
   const [visibleSections, setVisibleSections] = useState<Set<string>>(
