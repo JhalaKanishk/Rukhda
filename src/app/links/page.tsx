@@ -5,10 +5,7 @@ import {
   MessageCircle,
   Mail,
   Phone,
-  ArrowRight,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
 import Image from "next/image";
 import type React from "react";
 import Link from "next/link";
