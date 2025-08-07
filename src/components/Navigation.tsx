@@ -69,6 +69,9 @@ const Navigation = () => {
                   <p className="text-sm tagline text-muted-foreground tracking-wide">
                     ALL THINGS GROW WITH LOVE
                   </p>
+                  <span className="landscape text-primary text-[10px]  text-left block">
+                    Landscape
+                  </span>
                 </div>
               </div>
             </Link>
@@ -149,6 +152,9 @@ const Navigation = () => {
                 <p className="text-sm tagline text-muted-foreground tracking-wide">
                   ALL THINGS GROW WITH LOVE
                 </p>
+                <span className="landscape text-primary text-[10px]  text-left block">
+                  Landscape
+                </span>
               </div>
             </div>
             <Button

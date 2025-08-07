@@ -94,6 +94,9 @@ const Footer = () => {
                 <p className="text-sm tagline text-muted-foreground tracking-wide">
                   ALL THINGS GROW WITH LOVE
                 </p>
+                <span className="landscape text-primary text-[10px]  text-left block">
+                  Landscape
+                </span>
               </div>
             </div>
 
@@ -224,19 +227,10 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
             <div className="text-muted-foreground text-center lg:text-left">
               <div className="font-medium">
-                © 2024 Rukhada. All rights reserved.
+                © 2025 Rukhada. All rights reserved.
               </div>
               <div className="text-sm mt-1">
                 Bringing nature to life, one space at a time.
-              </div>
-            </div>
-
-            <div className="text-center">
-              <div className="text-sm text-muted-foreground">
-                Developed with 💚 by
-              </div>
-              <div className="font-semibold text-primary hover:text-accent transition-colors cursor-pointer">
-                Kanishk.Raj.Singh.Jhala
               </div>
             </div>
 
