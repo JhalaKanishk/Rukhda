@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Phone, Instagram, MessageCircle, Facebook } from "lucide-react";
+import { Phone, Instagram, MessageCircle, Facebook, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -46,6 +46,16 @@ export default function CircularPopup() {
         >
           <div className="w-12 h-12 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
             <Facebook className="w-5 h-5 text-blue-500" />
+          </div>
+        </Link>
+
+           {/* Mail */}
+        <Link
+          href="mailto:rukhadalandscap@gmail.com"
+          target="_blank"
+        >
+          <div className="w-12 h-12 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+            <Mail className="w-5 h-5 text-red-500" />
           </div>
         </Link>
       </div>

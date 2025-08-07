@@ -69,8 +69,8 @@ const Navigation = () => {
                   <p className="text-sm tagline text-muted-foreground tracking-wide">
                     ALL THINGS GROW WITH LOVE
                   </p>
-                  <span className="landscape text-primary text-[10px]  text-left block">
-                    Landscape
+                  <span className="landscape text-primary text-[8px]  text-left block">
+                    LANDSCAPE
                   </span>
                 </div>
               </div>
@@ -152,8 +152,8 @@ const Navigation = () => {
                 <p className="text-sm tagline text-muted-foreground tracking-wide">
                   ALL THINGS GROW WITH LOVE
                 </p>
-                <span className="landscape text-primary text-[10px]  text-left block">
-                  Landscape
+                <span className="landscape text-primary text-[8px]  text-left block">
+                  LANDSCAPE
                 </span>
               </div>
             </div>

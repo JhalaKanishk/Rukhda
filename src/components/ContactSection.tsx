@@ -82,8 +82,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["rukhadabyhng10@gmail.com"],
-      link: "mailto:rukhadabyhng10@gmail.com",
+      details: ["rukhadalandscap@gmail.com"],
+      link: "mailto:rukhadalandscap@gmail.com",
     },
     {
       icon: Clock,

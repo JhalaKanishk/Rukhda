@@ -62,7 +62,7 @@ export default function ConnectPage() {
               <p className="text-sm tagline text-muted-foreground tracking-wide">
                 ALL THINGS GROW WITH LOVE
               </p>
-              <span className="landscape text-primary text-[10px]  text-left block">Landscape</span>
+              <span className="landscape text-primary text-[8px]  text-left block">LANDSCAPE</span>
             </div>
           </div>
         </Link>
@@ -147,8 +147,8 @@ export default function ConnectPage() {
                   },
                   {
                     icon: Mail,
-                    text: "rukhadabyhng10@gmail.com",
-                    href: "mailto:rukhadabyhng10@gmail.com",
+                    text: "rukhadalandscap@gmail.com",
+                    href: "mailto:rukhadalandscap@gmail.com",
                   },
                 ].map((contact, index) => (
                   <a

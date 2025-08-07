@@ -33,7 +33,7 @@ export default function HeroSection() {
     },
     {
       icon: Mail,
-      href: "mailto:rukhadabyhng10@gmail.com",
+      href: "mailto:rukhadalandscap@gmail.com",
       label: "Email",
       color: "hover:bg-blue-500 hover:text-white",
     },

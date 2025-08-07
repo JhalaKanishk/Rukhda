@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
+import Footer from "@/components/FooterSection";
+import CircularPopup from "@/components/CircularPopup";
 
 const categories = [
   {
@@ -177,7 +179,17 @@ export default function GalleryPage() {
                   height={40}
                   className="h-10 w-10 object-contain border-2 border-primary rounded-full"
                 />
-                <span className="text-2xl font-bold text-primary">RUKHADA</span>
+                <div className="flex flex-col conatineHead items-center">
+                  <span className="text-2xl font-bold text-primary">
+                    RUKHADA
+                  </span>
+                  <p className="text-sm tagline text-muted-foreground tracking-wide">
+                    ALL THINGS GROW WITH LOVE
+                  </p>
+                  <span className="landscape text-primary text-[8px]  text-left block">
+                    LANDSCAPE
+                  </span>
+                </div>
               </div>
             </Link>
 
@@ -317,6 +329,10 @@ export default function GalleryPage() {
           </button>
         </div>
       </section>
+
+      {/* FOOTER CONTENT */}
+      <Footer />
+                 <CircularPopup />
     </div>
   );
 }
