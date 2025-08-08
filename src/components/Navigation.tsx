@@ -204,7 +204,7 @@ const Navigation = () => {
               <br />
               <p className="text-sm text-brown-text flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                rukhadabyhng10@gmail.com
+                rukhadalandscap@gmail.com
               </p>
             </div>
           </div>
