@@ -43,11 +43,12 @@ const AboutSection = () => {
     },
   ];
 
+  
   const services = [
     {
       title: "Landscaping",
       description:
-        "We design and develop beautiful outdoor spaces that reflect your personality and suit your lifestyle. Whether it’s a home garden, farmhouse, resort, or commercial property—we plan, design, and create landscapes that are green, aesthetic, and functional.",
+        "We design and develop beautiful outdoor spaces that reflect your personality and suit your lifestyle. Whether it’s a home garden, farmhouse, hotel, resort, or commercial property—we plan, design, and create landscapes that are green, aesthetic, and functional transforming outdoor spaceswith 2D & 3D visualization for clear planning.",
     },
     {
       title: "Terrace & Balcony Gardening",
@@ -62,7 +63,7 @@ const AboutSection = () => {
     {
       title: "Home & Office Indoor Plantation",
       description:
-        "We bring greenery indoors! From aesthetic pots to air-purifying plants, we style and set up indoor plants that fit your decor and mood. Perfect for homes, offices, cafes, salons, and clinics—boost your health and your interiors.",
+        "We bring greenery indoors! From aesthetic pots to air-purifying plants, we style and set up indoor plants that fit your decor and mood. Perfect for homes, offices, cafes, salons, clinics, hotels & resorts to boost your health and your interiors.",
     },
     {
       title: "Garden Styling",
@@ -72,7 +73,7 @@ const AboutSection = () => {
     {
       title: "Garden Execution",
       description:
-        "From design to final set-up, we take care of the full garden project. Our team will handle plantation, hardscape, irrigation systems, lighting, and accessories—everything needed to make your dream garden come alive.",
+        "From design to final set-up, we take care of the full garden project. Our team will handle plantation, hardscape, irrigation systems, lighting, furniture, stones and seating accessories—everything needed to make your dream garden come alive.",
     },
     {
       title: "Garden Maintenance",
