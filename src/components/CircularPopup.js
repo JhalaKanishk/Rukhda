@@ -31,7 +31,7 @@ export default function CircularPopup() {
 
         {/* Instagram */}
         <Link
-          href="https://www.instagram.com/rukhada_by_hng?igsh=Y3R4c3pxMWhpdTU5"
+          href="https://www.instagram.com/rukhada_landscape/?igsh=MXFlamQ2ZnpmMW1vaA%3D%3D#"
           target="_blank"
         >
           <div className="w-12 h-12 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
@@ -51,7 +51,7 @@ export default function CircularPopup() {
 
            {/* Mail */}
         <Link
-          href="mailto:rukhadalandscap@gmail.com"
+          href="mailto:rukhadalandscape@gmail.com"
           target="_blank"
         >
           <div className="w-12 h-12 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">

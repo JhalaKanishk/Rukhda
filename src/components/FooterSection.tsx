@@ -37,7 +37,7 @@ const Footer = () => {
     {
       icon: Instagram,
       name: "Instagram",
-      href: "https://www.instagram.com/rukhada_by_hng?igsh=Y3R4c3pxMWhpdTU5",
+      href: "https://www.instagram.com/rukhada_landscape/?igsh=MXFlamQ2ZnpmMW1vaA%3D%3D#",
       color: "hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500",
       followers: "12.5K",
     },
@@ -116,8 +116,8 @@ const Footer = () => {
                 },
                 {
                   icon: Mail,
-                  text: "rukhadalandscap@gmail.com",
-                  href: "mailto:rukhadalandscap@gmail.com",
+                  text: "rukhadalandscape@gmail.com",
+                  href: "mailto:rukhadalandscape@gmail.com",
                 },
                 // {
                 //   icon: MapPin,

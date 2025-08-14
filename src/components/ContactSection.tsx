@@ -83,7 +83,7 @@ const ContactSection = () => {
       icon: Mail,
       title: "Email Us",
       details: ["rukhadalandscap@gmail.com"],
-      link: "mailto:rukhadalandscap@gmail.com",
+      link: "mailto:rukhadalandscape@gmail.com",
     },
     {
       icon: Clock,

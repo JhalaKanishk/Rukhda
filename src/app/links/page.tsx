@@ -18,6 +18,7 @@ export default function ConnectPage() {
     url: string;
     hoverColor: string;
   };
+
   const SocialIcon = ({
     name,
     icon: Icon,
@@ -62,7 +63,9 @@ export default function ConnectPage() {
               <p className="text-sm tagline text-muted-foreground tracking-wide">
                 ALL THINGS GROW WITH LOVE
               </p>
-              <span className="landscape text-primary text-[8px]  text-left block">LANDSCAPE</span>
+              <span className="landscape text-primary text-[8px] text-left block">
+                LANDSCAPE
+              </span>
             </div>
           </div>
         </Link>
@@ -74,24 +77,22 @@ export default function ConnectPage() {
 
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center px-6">
-        <div className="grid grid-cols-3 grid-rows-3 gap-6 place-items-center">
-          {/* Top row */}
-          <div></div>
+        <div className="grid grid-cols-2 grid-rows-3 gap-6 place-items-center">
+          {/* Row 1 */}
           <SocialIcon
             name="Instagram"
             icon={Instagram}
-            url="https://www.instagram.com/rukhada_by_hng?igsh=Y3R4c3pxMWhpdTU5"
+            url="https://www.instagram.com/rukhada_landscape/?igsh=MXFlamQ2ZnpmMW1vaA%3D%3D#"
             hoverColor="hover:bg-pink-500"
           />
-          <div></div>
-
-          {/* Middle row */}
           <SocialIcon
             name="Facebook"
             icon={Facebook}
             url="https://www.facebook.com/share/19VpsfZxVs/?mibextid=wwXIfr"
             hoverColor="hover:bg-blue-600"
           />
+
+          {/* Row 2 */}
           <SocialIcon
             name="Website"
             icon={Globe}
@@ -105,39 +106,39 @@ export default function ConnectPage() {
             hoverColor="hover:bg-green-500"
           />
 
-          {/* Bottom row */}
-          <div></div>
+          {/* Row 3 */}
           <SocialIcon
             name="Call"
             icon={Phone}
             url="tel:+918949040522"
             hoverColor="hover:bg-yellow-500"
           />
-          <div></div>
+          <SocialIcon
+            name="Email"
+            icon={Mail}
+            url="mailto:rukhadalandscape@gmail.com"
+            hoverColor="hover:bg-red-500"
+          />
         </div>
       </main>
 
       {/* Footer */}
       <footer className="relative bg-gradient-to-b from-background via-primary/5 to-primary/10 overflow-hidden">
-        {/* Background decorations */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 w-40 h-40 bg-primary rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-32 h-32 bg-accent rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-primary rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
 
-        {/* Main Footer Content */}
         <div className="container mx-auto px-8 py-16 relative z-10">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
-            {/* Company Info */}
             <div className="space-y-6">
-              <p className="text-muted-foreground leading-relaxed  text-[15px]">
-                Transforming spaces with natures beauty. We specialize in plant
+              <p className="text-muted-foreground leading-relaxed text-[15px]">
+                Transforming spaces with nature's beauty. We specialize in plant
                 care, interior plant décor, and creating peaceful green
                 environments for homes, offices, and special events.
               </p>
 
-              {/* Contact Info */}
               <div className="space-y-4">
                 {[
                   {
@@ -147,8 +148,8 @@ export default function ConnectPage() {
                   },
                   {
                     icon: Mail,
-                    text: "rukhadalandscap@gmail.com",
-                    href: "mailto:rukhadalandscap@gmail.com",
+                    text: "rukhadalandscape@gmail.com",
+                    href: "mailto:rukhadalandscape@gmail.com",
                   },
                 ].map((contact, index) => (
                   <a
@@ -169,7 +170,6 @@ export default function ConnectPage() {
           </div>
         </div>
 
-        {/* Bottom Footer */}
         <div className="border-t border-primary/20 bg-primary/5 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">

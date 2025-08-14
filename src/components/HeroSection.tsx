@@ -21,7 +21,7 @@ export default function HeroSection() {
   const socialLinks = [
     {
       icon: Instagram,
-      href: "https://www.instagram.com/rukhada_by_hng?igsh=Y3R4c3pxMWhpdTU5",
+      href: "https://www.instagram.com/rukhada_landscape/?igsh=MXFlamQ2ZnpmMW1vaA%3D%3D#",
       label: "Instagram",
       color: "hover:bg-pink-500 hover:text-white",
     },
@@ -33,7 +33,7 @@ export default function HeroSection() {
     },
     {
       icon: Mail,
-      href: "mailto:rukhadalandscap@gmail.com",
+      href: "mailto:rukhadalandscape@gmail.com",
       label: "Email",
       color: "hover:bg-blue-500 hover:text-white",
     },
