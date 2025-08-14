@@ -134,7 +134,7 @@ export default function ConnectPage() {
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-[15px]">
-                Transforming spaces with nature's beauty. We specialize in plant
+                Transforming spaces with natures beauty. We specialize in plant
                 care, interior plant décor, and creating peaceful green
                 environments for homes, offices, and special events.
               </p>
