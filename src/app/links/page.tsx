@@ -102,9 +102,10 @@ export default function ConnectPage() {
           <SocialIcon
             name="WhatsApp"
             icon={MessageCircle}
-            url="https://wa.me/8949040522"
+            url="https://wa.me/918949040522"
             hoverColor="hover:bg-green-500"
           />
+
 
           {/* Row 3 */}
           <SocialIcon
